@@ -1,0 +1,31 @@
+<h1 id="process-computedelimitationstudyareas">Process : ComputeDelimitationStudyAreas</h1>
+<h2 id="input-data">Input Data :</h2>
+<ul>
+<li>A central point within the study area (e.g. the main square or town hall)</li>
+<li>An administrative or statistic geography (e.g. municipalities)</li>
+</ul>
+<h2 id="output-data">Output Data :</h2>
+<ul>
+<li>An isochrone covering the area which can be reached by car within a given time.</li>
+<li>A dataset with geographies touching the isochrone, including a variable with a percentage of the area inside of the isochrone.</li>
+</ul>
+<h2 id="method">Method:</h2>
+<h3 id="step-1-computing-the-isochrones">Step 1: Computing the isochrones</h3>
+<ul>
+<li>Program: QGIS</li>
+<li>Install or open the <a href="https://github.com/GIScience/orstools-qgis-plugin">ORS Tools plugin</a></li>
+<li>Go to Batch Jobs and choose Isochrones from Point</li>
+<li>Choose travel mode = driving car; Dimension = time, 45 minutes; choose central point within the region as input point</li>
+<li>Execute and save output isochrone</li>
+</ul>
+<h3 id="step-2-intersect-isochrones-with-geographies">Step 2: Intersect isochrones with geographies</h3>
+<ul>
+<li>Program: QGIS</li>
+<li>Load isochrones and geographies</li>
+<li>Execute model data_prep_select_geographies_percentage.model3 in graphical modeller</li>
+<li>Add geographies manually which do not intersect but are surrounded by municipalities which do</li>
+</ul>
+<h3 id="step-3-filter-to-certain-extent">Step 3: Filter to certain extent</h3>
+<ul>
+<li>Use filter to reduce the output geographies to a certain extent (e.g. “perc_inside” &gt;= 0.2)</li>
+</ul>

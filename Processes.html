@@ -1,0 +1,20 @@
+<h1 id="processes">Processes</h1>
+<p>List of processes that are relevant to the Subdense dashboard production. These processes can be either simply described on this git or shared. The stakes of registering and describing them are mainly : collaboration (to facilitate collaborative production of the dashboard), comparable resulting maps (to adopt as much as possible similar choices for the resulting maps to be comparable), documenting the provenance of datasets and maps in the project (by referring to a production process in the description of the map and of the dataset).</p>
+<hr />
+<p><a href="DeliminateStudyArea.md">Delimitation of study areas</a> : procedure to compute a functional urban area in QGIS (uses a QGIS model)</p>
+<p><a href="PrepareBuildingData.md">PrepareBuildingData</a> : general procedure to prepare the BuildingData from a given source on an specific area of interest and time of interest.</p>
+<p><a href="PrepareBuildingDataBDTopo.md">PrepareBuildingDataBDTopo</a> : prepare BuildingData on a french city with BDTopo</p>
+<p><a href="PrepareBuildingDataOSM.md">PrepareBuildingDataOSM</a> : prepare BuildingData on any city with OSM</p>
+<p><a href="ComputeBuildingEvolution.md">ComputeBuildingEvolution</a> : derive and refine BuildingEvolution data based on BuildingData at time t1 and t2</p>
+<p><a href="ComputeChangeInBuiltup_area.md">Compute change in built-up area per parcel</a></p>
+<p><a href="#Process-template">Process template</a></p>
+<hr />
+<h2 id="process-template">Process-template</h2>
+<ul>
+<li>naming policy : Please use an informative name. Try and avoid creating too many different processes. If there are specific versions of a process you may consider it is just one process and use the description to describe the specific subcases, for example when a generic process is applied to a specific datasource it becomes a more specific process. The identifier of the process is used to name the dedicated description file or description folder. It is also used to refer to the process in the description of datasets or maps that are its output.</li>
+<li>for the description, use a free text file and try and adopt the following structure</li>
+<li><strong>Shortdescription of the functionality</strong> : one or two sentences to describe the process functionality (simplify, transform, enrich, ..)</li>
+<li><strong>Input/output</strong> : include a detailed specification (files, types, data models, etc.) of the input and output data and ideally include also preconditions and postconditions here.</li>
+<li><strong>Method</strong> : describe the method, with the successive steps necessary to reproduce it; this can be a textual description in terms of a fully manual process, or commands to run if scripts or executables are provided</li>
+<li><strong>Feedback</strong> : Comments related to the process</li>
+</ul>

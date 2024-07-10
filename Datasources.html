@@ -1,0 +1,108 @@
+<h1 id="datasources">Datasources</h1>
+<p>List of datasources potentially relevant for the dashboard, and associated comments</p>
+<hr />
+<ol type="1">
+<li><a href="#BDTOPO-FR">BDTOPO-FR</a></li>
+<li><a href="#EUBUCCO">EUBUCCO</a></li>
+<li><a href="#ATKIS-DE">ATKIS-DE</a></li>
+<li><a href="#GHSL-UCDB">GHSL UCDB</a></li>
+<li><a href="#OPENZOOM-UK">OPENZOOM-UK</a></li>
+<li><a href="#OSM">OSM</a></li>
+<li><a href="#OSMASTERMAP-UK">OSMASTERMAP-UK</a></li>
+<li><a href="#OSNGD-UK">OSNGD-UK</a></li>
+<li><a href="#OCS-GE2-FR">OCS-GE2-FR</a></li>
+<li><a href="#OpenDataStrasbourg-FR">OpenDataStrasbourg-FR</a></li>
+<li><a href="#DonnéesSocioÉconomique-INSEE-FR">DonnéesSocioÉconomique-INSEE-FR</a></li>
+<li><a href="#Géométries-des-IRIS-IGN-FR">Géométries-des-IRIS-IGN-FR</a></li>
+<li><a href="#CadastralData-FR">CadastralData-FR</a></li>
+<li><a href="#FONCIER-CEREMA-FR">FONCIER-CEREMA-FR</a></li>
+<li><a href="#Datasource-naming-policy">Datasource naming policy</a> *******</li>
+</ol>
+<h2 id="bdtopo-fr">BDTOPO-FR</h2>
+<ul>
+<li><strong>Available Documentation</strong> :
+<ul>
+<li>Standard ISO19139 metadata : https://geoservices.ign.fr/sites/default/files/2023-01/IGNF_BDTOPOr_3-3.html</li>
+<li>Detailed documentation : different documents describe the current product and past versions, https://geoservices.ign.fr/documentation/donnees/vecteur/bdtopo, a key document is DC_BDTOPO_3-3 https://geoservices.ign.fr/sites/default/files/2024-05/DC_BDTOPO_3-3.pdf</li>
+<li>Quality control : the results of quality control are available per departement, like https://geoservices.ign.fr/sites/default/files/2024-01/RCQ_BDTOPO_D67.pdf</li>
+<li>BD TOPO® | Géoservices (ign.fr), french, a fine description of content is available in french through an interactive interface : https://geoservices.ign.fr/bd-topor-explorer-descriptif-de-contenu</li>
+<li>Additional metadata : there are additional metadata that are specific to communes or to departement and which are relevant to SUBDENSE, their fine description is https://geoservices.ign.fr/sites/default/files/2023-01/DL_vecteur.pdf pp.14-16</li>
+</ul></li>
+<li><strong>Clues to prepare BuildingDataSet on Temporal and Spatial scope of interest</strong> :
+<ul>
+<li>Data can be downloaded either on whole France, or regions or departements. A download is associated to a set of metadata that is generic to BDTopo product.</li>
+</ul></li>
+<li><strong>Quotes of Documentation RelevantToAStudy</strong> :</li>
+<li>the conceptual model for building in BDTopo is " Construction au-dessus du sol qui est utilisée pour abriter des humains, des animaux, des objets, pour la production de biens économiques ou pour la prestation de services et qui se réfère à toute structure construite ou érigée de façon permanente sur son site.", cf DC_BDTopo p54</li>
+<li>product versions : the current version of the product is 3.3. Shift from v2 to v3 took place between 2018 and 2019.</li>
+<li>stable identifier : see https://geoservices.ign.fr/sites/default/filhttps://geoservices.ign.fr/contoursirises/2023-01/IGNF_BDTOPOr_3-3.html “Depuis la version 3.0, tous les objets possèdent un identifiant unique et stable dans le temps.”</li>
+<li>change in selection criteria to represent buildings in the data : “Initialement, les seuils de sélection des bâtiments étaient les suivants : Tous les bâtiments de plus de 50 m² sont inclus. Les bâtiments faisant entre 20 et 50 m² sont sélectionnés en fonction de leur environnement et de leur aspect. Les bâtiments de moins de 20 m² sont représentés par un objet de classe Construction ponctuelle s’ils sont très hauts, ou s’ils sont spécifiquement désignés sur la carte au 1 : 25 000 en cours (ex: antenne, transformateur…). Après unification de la BD TOPO® avec la BD PARCELLAIRE®, Tous les bâtiments présents dans la dernière édition de la BD PARCELLAIRE® vecteur sont inclus, sauf éventuellement des bâtiments manifestement détruits depuis la date de validité de la BD PARCELLAIRE®. Les petits bâtiments de la BD PARCELLAIRE® qui représentent des constructions ponctuelles (exemple des transformateurs) ou des constructions linéaires (exemple des murs de remparts) sont saisis avec leur modélisation initiale respective en BD TOPO®. Il n’existe plus de seuil minimal pour la superficie des bâtiments. Cependant, si une nouvelle saisie photogrammétrique a lieu après les phases d’unification du bâti, les nouveaux bâtiments ne posséderont pas la granularité de la BD PARCELLAIRE®. Pour la restitution, les seuils de sélection initiaux sont alors appliqués (bâtiments de plus de 50 m² et bâtiments de 20 à 50 m² en fonction de leur environnement et de leur aspect).”</li>
+<li>change in building granularity : p55 “Les bâtiments BD PARCELLAIRE® ont une granularité plus fine que les bâtiments issus de BD TOPO® (découpage aux parcelles, aux extensions de bâtiment…). En conséquence, ce qui n’était qu’un bâtiment en BD TOPO® est représenté par plusieurs bâtiments après unification.”</li>
+</ul>
+<h2 id="eubucco">EUBUCCO</h2>
+<ul>
+<li><strong>Documentation</strong> : https://docs.eubucco.com/</li>
+<li><ul>
+<li><strong>Feedback</strong> : EUBUCCO is a scientific database of individual building footprints for 200+ million buildings across the 27 European Union countries and Switzerland, together with three main attributes – building type, height and construction year – included for respectively 45%, 74%, 24% of the buildings. EUBUCCO is composed of 50 open government datasets and OpenStreetMap that have been collected, harmonized and partly validated. https://geoservices.ign.fr/contoursiris ## ATKIS-DE</li>
+</ul></li>
+<li><strong>Documentation</strong> for buildings on national level: https://gdz.bkg.bund.de/index.php/default/digitale-geodaten/sonstige-geodaten/amtliche-hausumringe-deutschland-hu-de.html</li>
+</ul>
+<h2 id="ghsl-ucdb">GHSL-UCDB</h2>
+<ul>
+<li>Global Human Settlement Layer Urban Center Database, https://ghsl.jrc.ec.europa.eu/</li>
+<li><strong>Documentation</strong> https://ghsl.jrc.ec.europa.eu/degurbaDefinitions.php</li>
+</ul>
+<h2 id="openzoom-uk">OPENZOOM-UK</h2>
+<ul>
+<li><strong>Documentation</strong> : https://beta.ordnancesurvey.co.uk/products/os-open-zoomstack , english</li>
+<li><strong>Feedback</strong> : Analysis and quotation of documentation relevant to SUBDENSE : https://www.ordnancesurvey.co.uk/documents/os-open-zoomstack-technical-specification.pdf?_gl=1<em>1jxmav3</em>_ga<em>NzE3NjU4MTY0LjE2ODEzNjk5Mjk.</em>_ga_59ZBN7DVBG*MTY4MTM2OTkyOS4xLjAuMTY4MTM2OTkyOS42MC4wLjA.&amp;_ga=2.2835769.808952103.1681369930-717658164.1681369929 , p5 : “Generalised building footprints at both local and district resolutions. The local buildings have a unique identifier which can be used to style features distinctly. The identifier will not be persistent between product versions and therefore there will be no change history information for a feature.”</li>
+</ul>
+<h2 id="osm">OSM</h2>
+<h2 id="osmastermap-uk">OSMASTERMAP-UK</h2>
+<ul>
+<li><strong>Documentation</strong> : https://beta.ordnancesurvey.co.uk/products/os-mastermap-topography-layer</li>
+<li><strong>Feedback</strong> : Analysis and quotation of documentation relevant to SUBDENSE : Schema : geometries bear the themes. A building is a TopographicArea. “Attribute: TOID or gml:id Definition: The unique topographic reference number. It consists of the letters ‘osgb’ followed by thirteen or sixteen digits. The TOID must always be retained / stored in its entirety and any leading zeros on the TOID are retained to permit linking of the feature to other OS MasterMap products” “Attribute: changeHistory Definition: Information about the change history of a feature that comprises the reason for the change and the date for this change. Each feature may have numerous change history records, and these are ordered chronologically. A complex attribute.”</li>
+</ul>
+<h2 id="osngd-uk">OSNGD-UK</h2>
+<ul>
+<li><strong>Documentation</strong> : https://www.ordnancesurvey.co.uk/business-government/new-data-access-methods?_gl=1<em>13idjk8</em>_ga<em>NzE3NjU4MTY0LjE2ODEzNjk5Mjk.</em>_ga_59ZBN7DVBG*MTY4MTM2OTkyOS4xLjEuMTY4MTM3MDIxNy41OS4wLjA.&amp;_ga=2.81454110.808952103.1681369930-717658164.1681369929</li>
+<li><strong>Feedback</strong> : this is an integration of OS data product into a unified product associated with user friendly web services to select relevant data.</li>
+</ul>
+<h2 id="ocs-ge2-fr">OCS-GE2-FR</h2>
+<ul>
+<li><strong>Documentation</strong> : https://ocs.geograndest.fr/compare</li>
+<li><strong>Feedback</strong> : Access to a comparative tool between two available datasets (2007-2010 and 2010-2019) An exploration of the data reveals that there have been no notable changes in the evolution of land use themes over the period studied. For example, if we look at changes in land use between 2010 and 2019, we only see an increase of 49 ha in built-up areas, but with a decrease in areas undergoing change and agricultural areas.</li>
+</ul>
+<h2 id="opendatastrasbourg-fr">OpenDataStrasbourg-FR</h2>
+<ul>
+<li><strong>Documentation</strong> : https://data.strasbourg.eu/explore/?sort=modified</li>
+<li><strong>Feedback</strong> : The open data provided by OpenDataStrasbourg is valuable for our analysis of urban development. However, a challenge lies in how to calculate the evolution of urban entities, such as buildings and addresses, due to the structure of the available data. Although this data is regularly updated and contains up-to-date information, it is presented in the form of vintages with only the most recent date. This presentation limits our ability to directly observe changes over time. Looking at the metadata associated with these datasets, it is clear that updates are being made to the attributes of the entities. This suggests that, although direct historical data is not available, changes are taking place at the attribute level which could indicate modifications or developments in the urban space.</li>
+</ul>
+<h2 id="donnéessocioéconomique-insee-fr">DonnéesSocioÉconomique-INSEE-FR</h2>
+<ul>
+<li><strong>Avalaible Documentation</strong> : Recensement de la population à la commune/canton/département/IRIS *Les données recensement de la population au niveau communal et départemental: https://www.insee.fr/fr/statistiques/1893204
+<ul>
+<li>Les données recensement de la population à l’IRIS: https://www.insee.fr/fr/statistiques?debut=20&amp;idprec=2028582&amp;theme=1&amp;categorie=1&amp;geo=IRIS-1</li>
+</ul></li>
+<li><strong>Feedback</strong> :</li>
+</ul>
+<h2 id="géométries-des-iris-ign-fr">Géométries-des-IRIS-IGN-FR</h2>
+<ul>
+<li><strong>Documentation</strong> : Recensement de la population à la commune/canton/département/IRIS : https://geoservices.ign.fr/contoursiris</li>
+<li><strong>Feedback</strong> :</li>
+</ul>
+<h2 id="cadastraldata-fr">CadastralData-FR</h2>
+<ul>
+<li><strong>Documentation</strong> : https://cadastre.data.gouv.fr/datasets</li>
+<li><strong>Feedback</strong> : Cadastral data is available with several editions ranging from 2017 to 2024 through the Computerized Cadastral Plan and cadastral data from the Eurometropolis of Strasbourg. The departmental files of computerized lineage documents (DFI) provide access to the history of cadastral parcels, including modifications since their digitization in the 1980s and 1990s. They detail the origin and dates of updates, derived from various documents such as surveys or reworkings. They track some of the parcel changes since 1990.</li>
+</ul>
+<h2 id="foncier-cerema-fr">FONCIER-CEREMA-FR</h2>
+<ul>
+<li><strong>Documentation</strong> : https://datafoncier.cerema.fr/obtention-des-donnees-foncieres</li>
+<li><strong>Feedback</strong> : The property files come from the MAJIC application of the DGFIP and are supplemented by Cerema. They contain fiscal information primarily related to property tax, covering characteristics of the premises (such as the construction date and surface area), specifics of the parcels, as well as details about the owners, including their status (public or private) and addresses. This is an interesting source as it can be used for various purposes, particularly in observing territorial changes. These are annual data and can allow multi-period analyses ranging from broad dissemination to more detailed geolocation at the parcel level. The data is available and free for entitled parties. In accordance with the CNIL declaration signed by DGALN, they can provide us with previous editions within the limit of 10 years, from 2013 to 2022 (the oldest data dating back to 2009, we will not be able to go back 20 or 30 years).</li>
+</ul>
+<p>Access to this data is subject to an agreement with Cerema.</p>
+<h2 id="datasource-naming-policy">Datasource-naming-policy</h2>
+<ul>
+<li>Using the source usual name and add then -UK, -FR, -DE if the product is specific to a given country</li>
+</ul>

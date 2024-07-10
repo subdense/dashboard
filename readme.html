@@ -1,0 +1,19 @@
+<h1 id="process-createghs_pop_2020_allcsr_reduced">Process : CreateGHS_POP_2020_ALLCSR_reduced</h1>
+<h2 id="input-data">Input Data :</h2>
+<ul>
+<li>Population density: 4 Geotiffs covering all CSR from GHSL-UCDB download site</li>
+<li>Building footprints 2021 for all CSR</li>
+<li>Resulting dataset of process DeliminateStudyArea</li>
+</ul>
+<h2 id="output-data">Output Data :</h2>
+<ul>
+<li>GHS_POP_2020_ALLCSR_reduced: A vector layer (100x100m grid) containing population per gridcell</li>
+</ul>
+<h2 id="method">Method:</h2>
+<h3 id="step-1-load-ghsl-pop-geo-tiff-and-extract-0-values">Step 1: Load GHSL POP Geo-Tiff and extract 0 values</h3>
+<ul>
+<li>Program: QGIS</li>
+<li>Download GEO-Tiffs covering all CSR from <a href="https://ghsl.jrc.ec.europa.eu/download.php?ds=pop">GHSL-UCDB download site</a> (Epoch: 2020, Resolution: 100m, CRS: Mollweide)</li>
+<li>Load Geo-Tiffs in QGIS and merge them to one (Raster –&gt; Miscellaneus –&gt; Merge), choose 0 to treat as “nodata”</li>
+</ul>
+<p>… to be continued</p>

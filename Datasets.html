@@ -1,0 +1,72 @@
+<h1 id="datasets">Datasets</h1>
+<p>List of datasets, either acquired from OTS products, or produced during Subdense. It is useful to 1) register their identifiers in the project 2) give access to Subdense-specific metadata related to these datasets. Such metadata either or in this file beneath the dataset identifiers, or they are in a dedicated file with the identifier as file name and the extension md.</p>
+<hr />
+<ol type="1">
+<li><a href="#FR-STR-FUA-Evolution-2011-21">FR-STR-FUA-Evolution-2011-21</a></li>
+<li><a href="#DE-DOR-FUA-Evolution-2011-21">DE-DOR-FUA-Evolution-2011-21</a></li>
+<li><a href="#UK-LIV-FUA-Evolution-2011-21">UK-LIV-FUA-Evolution-2011-21</a></li>
+<li><a href="#FR-STR-FUA-Building-2011">FR-STR-FUA-Building-2011</a></li>
+<li><a href="#FR-STR-FUA-Building-2021">FR-STR-FUA-Building-2021</a></li>
+<li><a href="#GHS_POP_ALLCSR_2020_reduced">GHS_POP_ALLCSR_2020_reduced</a></li>
+<li><a href="#Dataset-naming-policy">Dataset naming policy</a></li>
+<li><a href="#Dataset-description-template">Dataset description template</a> *******</li>
+</ol>
+<h2 id="fr-str-fua-evolution-2011-21">FR-STR-FUA-Evolution-2011-21</h2>
+<ul>
+<li>Building evolution data computed from BDTopo building data on the functional area of the city Strasbourg between 2011 and 2021</li>
+<li>DOI : tbc, https://doi.org/10.57745/RFKKYX</li>
+<li>Provenance :
+<ul>
+<li>realisation of process “PrepareBuildingData” to prepare the building datasets on the area of interest and at time t1 (2011) and t2 (2021). These dataset are identified on the dashboard as FR-STR-FUA-Building-2011 and FR-STR-FUA-Building-2021</li>
+<li>realisation of process “ComputeBuildingEvolution” to derive the evolution data based on building data.</li>
+<li>realisation of process “RefineEvolutionBDTopo” to refine the evolution data,perform initial quality control on the results and to add a stylesheet to generate a geopackage.</li>
+</ul></li>
+<li>Usage : used to study the densification of Strasbourg see details in Strasbourg study file</li>
+<li>Distribution : open licence, can be shared within the consortium through our specific ftp, and through a research data platform (see DOI)</li>
+</ul>
+<h2 id="de-dor-fua-evolution-2011-21">DE-DOR-FUA-Evolution-2011-21</h2>
+<ul>
+<li>Building evolution data computed from ATKIS Building data on the functional area of the city Dortmund between 2011 and 2021</li>
+<li>Provenance : described in detail in <a href="/Processes/ComputeBuildingEvolution/ComputeBuildingEvolution.md">the process</a></li>
+<li>Usage : used to portray Building Evolution Maps in order to show where changes are happening. Described in detail <a href="/Maps/Maps.md">here</a></li>
+<li>Distribution : not open licence</li>
+</ul>
+<h2 id="uk-liv-fua-evolution-2011-21">UK-LIV-FUA-Evolution-2011-21</h2>
+<ul>
+<li>Building evolution data computed from OSMasterMap on the functional area of the city Liverpool between 2011 and 2021</li>
+<li>Provenance : described in detail in <a href="/Processes/ComputeBuildingEvolution/ComputeBuildingEvolution.md">the process</a></li>
+<li>Usage : used to portray Building Evolution Maps in order to show where changes are happening. Described in detail <a href="/Maps/Maps.md">here</a></li>
+<li>Distribution : not open licence</li>
+</ul>
+<h2 id="fr-str-fua-building-2011">FR-STR-FUA-Building-2011</h2>
+<ul>
+<li>Building data from BDTopo on the functional area of the city Strasbourg in 2011</li>
+<li>Provenance : the generic process is described here <a href="/Processes/DataPreProcessing/PreProcessing.md">the process</a>. For this dataset, the downloaded departments are : La Moselle (57), Le Haut-Rhin (68) et Le Bas-Rhin (67).</li>
+<li>Usage : used to derive Evolution data between 2011 and 2021</li>
+<li>Distribution : open licence, can be shared within the consortium through our specific ftp, will be shared more widely through a research data platform to be identified within Subdense research data management plan)</li>
+</ul>
+<h2 id="fr-str-fua-building-2021">FR-STR-FUA-Building-2021</h2>
+<ul>
+<li>Building data from BDTopo on the functional area of the city Strasbourg in 2021</li>
+<li>Provenance : described in detail in <a href="/Processes/DataPreProcessing/PreProcessing.md">the process</a>. For this dataset, the downloaded departments are : La Moselle (57), Le Haut-Rhin (68) et Le Bas-Rhin (67).</li>
+<li>Usage : used to derive Evolution data between 2011 and 2021</li>
+<li>Distribution : open licence, can be shared within the consortium through our specific ftp, will be shared more widely through a research data platform to be identified within Subdense research data management plan)</li>
+</ul>
+<h2 id="ghs_pop_allcsr_2020_reduced">GHS_POP_ALLCSR_2020_reduced</h2>
+<ul>
+<li><strong>Provenance</strong>: data from GHSL-UCDB, application of process CreateGHS_POP_2020_ALLCSR_reduced, cropped with DeliminateStudyArea and filtered to “perc_inside” &gt;= 0.2</li>
+<li><strong>Usages</strong>: use as input for cluster analysis</li>
+<li><a href="https://ghsl.jrc.ec.europa.eu/datasets.php"><strong>How to cite</strong></a>: Schiavina M., Freire S., Carioli A., MacManus K. (2023): GHS-POP R2023A - GHS population grid multitemporal (1975-2030).European Commission, Joint Research Centre (JRC) PID: http://data.europa.eu/89h/2ff68a52-5b5b-4a22-8f40-c41da8332cfe, doi:10.2905/2FF68A52-5B5B-4A22-8F40-C41DA8332CFE</li>
+</ul>
+<h2 id="dataset-naming-policy">Dataset-naming-policy</h2>
+<p>The name of the dataset is a set of characterstrings attached with "_". Characterstrings : * area : DE-FKF (Frankfurt), DE-DOR (Dortmundt), FR-STR (Strasbourg), FR-TLS (Toulouse), UK-LVP (Liverpool), UK-BSL (Bristol) or ALLCSR (all case study regions) * specific area : FUA for functional area, or Name of a focused place within city<br />
+* theme or type of content : Buildings (for building), Evolutions (for data that describe evolutions), … //to be extended with new strings when new themes are added * YYYY, MM : in digits, possibly two dates if it is an evolution * Id : specific additional characters to distinguish different datasets when necessary</p>
+<p>The identifier of the dataset is used to name the dataset files (or zip repository) and to name the eventual dedicated metadata file for Subdense-specific metadata associated to the dataset. A dataset is considered the same resource even if it is enriched or corrected during the project. It keeps the same identifier, but the modifications are documented in its provenance property.</p>
+<h2 id="dataset-description-template">Dataset-description-template</h2>
+<ul>
+<li>A specific description template is proposed adapted to SUBDENSE dashboard workflows. It is not intended to replace existing model to describe geographical datasets but to complement them to adress SUBDENSE specific requirements</li>
+<li><strong>Provenance</strong> : Textual description of how the datasets was acquired or produced, preferably referring to processes that are described on the dashboard. This description can get enriched while the dataset is revised and improved (quality check and so on).</li>
+<li><strong>Usages</strong> : References to datasets, maps, hypothesis (papers) that have been produced with this dataset</li>
+<li><strong>Feedback</strong> : Comments related to the dataset, interpretation, identification of quality issues and so on</li>
+<li><strong>Distribution</strong> : how to access the data</li>
+</ul>

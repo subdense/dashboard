@@ -1,0 +1,23 @@
+<h1 id="process-getopenstreetmapbuildingdata">Process GetOpenStreetMapBuildingData</h1>
+<p>This process extracts OpenStreepMap buildings from the overpass API, at given dates and for given cities. Data is downloaded for specified functional urban areas.</p>
+<p>TODO: make it more flexible to take any list of polygons (or geometry file) as input -&gt; possible coupling with delimitation of study area with isochrones e.g.</p>
+<h1 id="input-data">Input data</h1>
+<ul>
+<li>list of names of FUAs (JRC GHSL-FUA layer) in a plain text file</li>
+</ul>
+<h1 id="output-data">Output data</h1>
+<ul>
+<li>a <code>data</code> folder containing, for each FUA, an <code>osm</code> and a <code>gpkg</code> file of OpenStreetMap buildings</li>
+</ul>
+<h1 id="usage">Usage</h1>
+<ul>
+<li>Create city poly files (for boundaries of the API request) -&gt; script <code>ogr2poly.py</code> from https://github.com/JusteRaimbault/ogr2poly For selected cities: all features in cities.gpkg (selection from GHSL-FUA layer: see data; processed in QGis to keep convex hull of each area) Any ogr compatible format should be fine.</li>
+</ul>
+<pre><code>   mkdir citypolys
+   python3 ogr2poly.py --prefix citypolys/ --field-name eFUA_name -v subdense-cities.gpkg</code></pre>
+<ul>
+<li><p>Check cities and years: plain text files <code>cities</code> and <code>years</code></p></li>
+<li><p>Run collection script <code>./getAllCitiesAllYears.sh</code> Requires: existing <code>$CITY.poly</code> files for each city name in <code>citypolys</code> dir ; gdal installed with ogr2ogr command Output: from the overpass API, osm and gpkg files in a <code>data</code> folder</p></li>
+</ul>
+<h1 id="tuning">Tuning</h1>
+<p>Modify the overpassql template in the script to tune the osm request. Request is done on the standard overpass server.</p>

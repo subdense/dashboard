@@ -1,0 +1,78 @@
+<h1 id="process-computebuildingevolution">Process : ComputeBuildingEvolution</h1>
+<h2 id="inputdata-1-buildingdataset_year1">InputData 1 : BuildingDataSet_year1</h2>
+<p>BuildingDataSet at the oldest time (see Process BuildingDataPreparation) ## InputData 2 : BuildingDataSet_year2 BuildingDataSet at a more recent time (see Process BuildingDataPreparation)</p>
+<h2 id="outputdata-1-buildingevolutiondataset-and-its-metadata">OutputData 1 : BuildingEvolutionDataSet (and its metadata)</h2>
+<p>Dataset corresponding to evolutions of buildings data, structured after the BuildingEvolutionSchema depicted in this folder, with the correct file naming, that is prepared as a shapefile, and as a geopackage containing the dataset plus a dedicated stylesheet (BuildingEvolution_style.qml) and ready to display. (Shapefile <code>.shp</code>: A widely used and recognized format in GIS. GeoPackage <code>.gpkg</code>: A more modern format offering better performance and greater flexibility) A description of this dataset within Subdense “Dataset” registry.</p>
+<h2 id="outputdata-2-matchinglinksset-and-its-metadata">OutputData 2 : MatchingLinksSet (and its metadata)</h2>
+<p>MatchingLinks between homologous features from the 2011 and 2021 datasets.</p>
+<h2 id="method-overview">Method overview</h2>
+<p>Produce “raw” BuildingEvolution data based on two BuildingDataSet at time t1 and t2 (Step 1 below) Refine the BuildingEvolution to identify evolutions that are related to evolution of products (i.e. data upgrades), and apply some quality control and some visual refinement (Step 2 below).</p>
+<h2 id="step-1-produce-raw-buildingevolution-from-building-data">Step 1 : Produce “raw” BuildingEvolution from Building Data</h2>
+<p>This first step is fully automatic. It uses matching libraries to produce matching links and automatically derive BuildingEvolution from these links.</p>
+<ol type="1">
+<li><strong>Clone the Subdense Matching Repository</strong>:
+<ul>
+<li>If not installed yet install GitHub Desktop available at <a href="https://desktop.github.com/">GitHub Desktop’s official website</a>.</li>
+<li>Visit the <a href="https://github.com/subdense/matching">Subdense Matching repository on GitHub</a>.</li>
+<li>Use GitHub Desktop to clone it to a local directory.</li>
+</ul></li>
+<li><strong>Add Input Data</strong>:</li>
+</ol>
+<ul>
+<li>Place input data in <code>/data/bati</code>, with two layers representing building data at times T1 and T2.</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Install Python 3</strong>:
+<ul>
+<li>Ensure Python 3 is installed on your system. Download from <a href="https://www.python.org/downloads/">Python’s official website</a>.</li>
+<li>Install jpype1, shapely, numpy,networkx, tqdm, pyogrio and geopandas using <code>pip3 install [module_name]</code>.</li>
+<li>Use <code>pip3</code> if multiple Python versions are installed; consider proxy settings if applicable.</li>
+<li></li>
+</ul></li>
+<li><strong>Option1 : use Visual Studio</strong> :</li>
+</ol>
+<ul>
+<li><p>Install Visual Studio Code from <a href="https://code.visualstudio.com/">Visual Studio Code’s website</a>.</p></li>
+<li><p>Open Local Repository in Visual Studio Code:</p>
+<ul>
+<li>Navigate to the local <code>matching</code> repository.</li>
+<li>Right-click and select “Open with Visual Studio Code”.</li>
+<li>Open <code>run.py</code> in Visual Studio Code.</li>
+<li>This script automates the execution of <code>matching.py</code> and applies the necessary data processing.</li>
+<li>Modify the script if needed to align with your data paths and settings.</li>
+</ul>
+<p><strong>Option2 : use command line</strong> : For users comfortable with the command line, the script can also be executed via a terminal using the following command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">python</span> run.py -layer1 ./data/fr/strasbourg_building_2011.gpkg -layer2 ./data/fr/strasbourg_building_2021.gpkg -attributes <span class="st">&#39;[&quot;HAUTEUR&quot;,&quot;ID&quot;]&#39;</span> -output_prefix FR_STR -java_memory 16G</span></code></pre></div>
+<p>This command runs <code>run.py</code> with specific parameters:</p></li>
+<li><p><code>-layer1</code> and <code>-layer2</code> specify the paths to the building data for the years 2011 and 2021, respectively.</p></li>
+<li><p><code>-attributes</code> allows the inclusion of specific attributes in the analysis, such as ‘HAUTEUR’ and ‘ID’.</p></li>
+<li><p><code>-output_prefix</code> sets the prefix for the output files, in this case ‘FR_STR’ for Strasbourg, France.</p></li>
+<li><p><code>-java_memory</code> allocates Java memory for the process, set here to 16 Gigabytes. Ensure that the paths and parameters are adjusted as per your specific data and system requirements.</p></li>
+</ul>
+<p>At the end of step 4, after running the code, two new files are generated in the <code>output_data</code> folder: <code>FR-STR_EVOLUTION</code> and <code>FR_STR_Matching_Links</code> in chosen formats.</p>
+<p>Prepare an entry in the Dataset.md registry to register these data -at least the Evolution dataset- and put the minimal info.</p>
+<ol start="5" type="1">
+<li><strong>Apply Stylesheet</strong>:
+<ul>
+<li>Open FR-STR-FUA-EVOLUTION in QGIS for analysis and visualization, apply the <code>BuildingEvolutionStyle</code> file from the “ComputeBuildingEvolution” folder for optimal display.</li>
+</ul></li>
+</ol>
+<h2 id="step-2-refinement-and-quality-check">Step 2 : Refinement and Quality Check</h2>
+<p>This step aims at refining the evolution to identify evolutions probably related by product evolution and to perform some first quality control on the result.</p>
+<h3 id="objectives">Objectives</h3>
+<ul>
+<li><strong>Data Refinement</strong>: Identify building evolutions related to the evolution of the BdTopo product and in the real world.</li>
+<li><strong>Quality Control</strong>: Perform an initial quality control to ensure data accuracy.</li>
+</ul>
+<h3 id="process">Process</h3>
+<p>The <a href="RefineEvolutionBDTopo.py">RefineEvolutionBDTopo.py</a> script is used to achieve the following refinements:</p>
+<ul>
+<li>Buildings of type <code>appeared</code> with an area less than 50 m² were identified and their type was changed to <code>stable</code>. The <code>evolutionProduct</code> field was updated to <code>Yes</code> and <code>evolutionEntities</code> to <code>No</code>.</li>
+<li>Buildings of type <code>split</code> were identified and their type was also changed to <code>stable</code>. The <code>evolutionProduct</code> field was updated to <code>Yes</code> and <code>evolutionEntities</code> to <code>No</code>.</li>
+<li>The data were verified using orthophoto images to ensure the quality of the results.</li>
+</ul>
+<h3 id="number-of-evolutions-detected">Number of Evolutions Detected</h3>
+<ul>
+<li><strong>Detected buildings of type appeared (&lt; 50 m²)</strong>: <code>105417</code></li>
+<li><strong>Detected buildings of type split</strong>: <code>451458</code></li>
+</ul>

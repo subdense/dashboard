@@ -1,0 +1,11 @@
+<h2 id="buildingevolution-dataschema">BuildingEvolution DataSchema</h2>
+<p>This schema structures data describing evolutions in building, based on observed evolution in building data and with the purpose to represent evolution of building entities in reality.</p>
+<p>Fields :</p>
+<p>** geometry : a geometry useful to display the evolution on a map. In case of an evolution of type “disappeared” it is the geometry of the 2011 building that participates to the evolution. In case of an evolution of another type the geometry is the joint geometry of the 2021 building that participates to the evolution.</p>
+<p>** id: id given by the computation procedure, unique within the BuildingEvolution dataset</p>
+<p>** type : type of change identified (Appeared / Disappeared / Merged / Split / Stable / Recomposed )</p>
+<p>** IdBuildings2011 : list of identifiers of Buildings that participate to the evolution at time 2011</p>
+<p>** IdBuildings2021 : list of identifiers of Buildings that participate to the evolution at time 2021</p>
+<p>** evolutionProduct : (YES/NO/Undefined) YES meaning that the evolution is very probably explained (possibly partly explained) by an evolution of the product</p>
+<p>** evolutionEntities : (YES/NO/Undefined) YES meaning that the evolution is very probably explained (possibly partly explained) by an evolution of the building entities in the real world</p>
+<p>** qualityControl : (YES/NO/Undefined) YES meaning that the evolution is explained by a quality control operation (between 2011 and 2021)</p>
