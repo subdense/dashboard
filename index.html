@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Periurban Densification Dashboard</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<style>
+  body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  .header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+  }
+  nav li {
+    margin: 15px;
+  }
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  .search-container {
+    text-align: center;
+    margin: 20px;
+  }
+  .search-container input[type="text"] {
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  .search-container button {
+    position: relative;
+    left: -35px;
+    border: none;
+    background-color: #4CAF50;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+  }
+  .map-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .map-wrapper {
+    width: 30%;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .map {
+    height: 300px;
+  }
+  .chart-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .chart {
+    width: 100%;
+    height: 400px;
+  }
+  .readme-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .feedback-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .feedback-section h3 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+  }
+  .feedback-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .feedback-section label {
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+  }
+  .feedback-section input[type="email"],
+  .feedback-section textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .feedback-section input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .feedback-section input[type="submit"]:hover {
+    background-color: #367c39;
+  }
+  @media (max-width: 768px) {
+    .feedback-section {
+      width: calc(100% - 40px);
+    }
+    .feedback-section input[type="email"],
+    .feedback-section textarea {
+      width: calc(100% - 20px);
+    }
+  }
+</style>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  async function loadHTMLContent(url, elementId) {
+    try {
+      const response = await fetch(url);
+      const htmlContent = await response.text();
+      document.getElementById(elementId).innerHTML = htmlContent;
+    } catch (error) {
+      console.error(`Error loading content from ${url}:`, error);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    loadHTMLContent('https://subdense.github.io/dashboard/Website/README.html', 'readme-content');
+    loadHTMLContent('https://subdense.github.io/dashboard/Website/Processes/Processes.html', 'processes-content');
+    loadHTMLContent('https://subdense.github.io/dashboard/Website/Data/Datasources.html', 'data-content');
+    loadHTMLContent('https://subdense.github.io/dashboard/Website/Concepts/Concepts.html', 'concepts-content');
+
+    const cities = {
+      Liverpool: [53.4084, -2.9916],
+      Strasbourg: [48.5734, 7.7521],
+      Dortmund: [51.5136, 7.4653],
+      Bristol: [51.4545, -2.5879],
+      Toulouse: [43.6047, 1.4442],
+      Frankfurt: [50.1109, 8.6821]
+    };
+
+    for (const [cityName, coordinates] of Object.entries(cities)) {
+      const map = L.map(`${cityName}-map`).setView(coordinates, 13);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+    }
+  });
+</script>
+</head>
+<body>
+<div class="header">
+  <h1>Periurban Densification Dashboard</h1>
+</div>
+<nav>
+  <ul>
+      <li><a href="https://subdense.github.io/dashboard/Website/Processes/Processes.html">Processes</a></li>
+      <li><a href="https://subdense.github.io/dashboard/Website/Data/Datasources.html">Data</a></li>
+      <li><a href="https://subdense.github.io/dashboard/Website/Concepts/Concepts.html">Concepts</a></li>
+      <li><a href="https://subdense.github.io/dashboard/Website/Maps/Maps.html">Maps</a></li>
+      <li><a href="https://subdense.github.io/dashboard/Website/README.html">README</a></li>
+      <!-- Ajoutez d'autres liens de menu ici -->
+  </ul>
+</nav>
+<div class="search-container">
+  <input type="text" placeholder="found a city..." id="searchInput">
+  <button id="searchBtn">🔍</button>
+</div>
+<div class="readme-container" id="readme-content"></div>
+<div class="content-section" id="processes-content"></div>
+<div class="content-section" id="data-content"></div>
+<div class="content-section" id="concepts-content"></div>
+<div class="comparison-container">
+  <h2>Comparing the 6 cities</h2>
+  <form id="compareForm">
+      <select id="city1">
+          <option value="Liverpool">Liverpool</option>
+          <option value="Strasbourg">Strasbourg</option>
+          <option value="Dortmund">Dortmund</option>
+          <option value="Bristol">Bristol</option>
+          <option value="Toulouse">Toulouse</option>
+          <option value="Frankfurt">Frankfurt</option>
+      </select>
+      <select id="city2">
+          <option value="Liverpool">Liverpool</option>
+          <option value="Strasbourg">Strasbourg</option>
+          <option value="Dortmund">Dortmund</option>
+          <option value="Bristol">Bristol</option>
+          <option value="Toulouse">Toulouse</option>
+          <option value="Frankfurt">Frankfurt</option>
+      </select>
+      <button type="button" onclick="compareCities()">Compare</button>
+  </form>
+</div>
+<div class="map-container">
+  <div class="map-wrapper">
+    <div id="Liverpool-map" class="map"></div>
+    <p>Liverpool</p>
+  </div>
+  <div class="map-wrapper">
+    <div id="Strasbourg-map" class="map"></div>
+    <p>Strasbourg</p>
+  </div>
+  <div class="map-wrapper">
+    <div id="Dortmund-map" class="map"></div>
+    <p>Dortmund</p>
+  </div>
+  <div class="map-wrapper">
+    <div id="Bristol-map" class="map"></div>
+    <p>Bristol</p>
+  </div>
+  <div class="map-wrapper">
+    <div id="Toulouse-map" class="map"></div>
+    <p>Toulouse</p>
+  </div>
+  <div class="map-wrapper">
+    <div id="Frankfurt-map" class="map"></div>
+    <p>Frankfurt</p>
+  </div>
+</div>
+<div class="feedback-section">
+  <h3>Leave Us Your Feedback</h3>
+  <form action="/submit-comment" method="POST">
+      <label for="feedbackType">Feedback type:</label>
+      <select id="feedbackType" name="feedbackType">
+          <option value="suggestion">Suggestion</option>
+          <option value="issue">Issue</option>
+          <option value="compliment">Compliment</option>
+      </select>
+      <label for="email">Your email (optionnal):</label>
+      <input type="email" id="email" name="email">
+      <label for="comment">Your comment:</label>
+      <textarea id="comment" name="comment" rows="4"></textarea>
+      <!-- Ajoutez un captcha ou d'autres mesures anti-spam ici si nécessaire -->
+      <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
