@@ -1,0 +1,135 @@
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    margin: 0;
+  }
+  
+  nav li {
+    margin: 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .search-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .search-container input[type="text"] {
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .search-container button {
+    position: relative;
+    left: -35px;
+    border: none;
+    background-color: #4CAF50;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .content-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content-section h2 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .feedback-section h3 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feedback-section label {
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .feedback-section input[type="email"],
+  .feedback-section textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .feedback-section input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .feedback-section input[type="submit"]:hover {
+    background-color: #367c39;
+  }
+  
+  @media (max-width: 768px) {
+    .feedback-section {
+      width: calc(100% - 40px);
+    }
+  
+    .feedback-section input[type="email"],
+    .feedback-section textarea {
+      width: calc(100% - 20px);
+    }
+  }
+  
