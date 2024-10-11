@@ -1,0 +1,1045 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://subdense.github.io/dashboard/Processes/ComputeBuildingEvolution/">
+      
+      
+        <link rel="prev" href="../Processes/">
+      
+      
+        <link rel="next" href="../ComputeChangeInBuiltup_area/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+    
+    
+      
+        <title>ComputeBuildingEvolution - SUBDENSE Dashboad</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#process_computebuildingevolution" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SUBDENSE Dashboad" class="md-header__button md-logo" aria-label="SUBDENSE Dashboad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SUBDENSE Dashboad
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ComputeBuildingEvolution
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/subdense/dashboard/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SUBDENSE Dashboad" class="md-nav__button md-logo" aria-label="SUBDENSE Dashboad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SUBDENSE Dashboad
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/subdense/dashboard/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Datasets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datasets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Datasources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datasources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Maps/Maps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Processes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Processes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Processes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Processes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ComputeBuildingEvolution
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ComputeBuildingEvolution
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#process_computebuildingevolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process : ComputeBuildingEvolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process : ComputeBuildingEvolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputdata_1_buildingdataset_year1" class="md-nav__link">
+    <span class="md-ellipsis">
+      InputData 1 : BuildingDataSet_year1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputdata_2_buildingdataset_year2" class="md-nav__link">
+    <span class="md-ellipsis">
+      InputData 2 : BuildingDataSet_year2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputdata_1_buildingevolutiondataset_and_its_metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      OutputData 1 : BuildingEvolutionDataSet (and its metadata)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputdata_2_matchinglinksset_and_its_metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      OutputData 2 : MatchingLinksSet (and its metadata)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method_overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_1_produce_raw_buildingevolution_from_building_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1 : Produce "raw" BuildingEvolution from Building Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_2_refinement_and_quality_check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2 : Refinement and Quality Check
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2 : Refinement and Quality Check">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objectives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number_of_evolutions_detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of Evolutions Detected
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ComputeChangeInBuiltup_area/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ComputeChangeInBuiltup_area
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DeliminateStudyArea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DeliminateStudyArea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PrepareBuildingData/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PrepareBuildingData
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PrepareBuildingDataBDTopo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PrepareBuildingDataBDTopo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PrepareBuildingDataOSM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PrepareBuildingDataOSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Studies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Studies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../StrasbourgStudy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StrasbourgStudy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#process_computebuildingevolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process : ComputeBuildingEvolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process : ComputeBuildingEvolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputdata_1_buildingdataset_year1" class="md-nav__link">
+    <span class="md-ellipsis">
+      InputData 1 : BuildingDataSet_year1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputdata_2_buildingdataset_year2" class="md-nav__link">
+    <span class="md-ellipsis">
+      InputData 2 : BuildingDataSet_year2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputdata_1_buildingevolutiondataset_and_its_metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      OutputData 1 : BuildingEvolutionDataSet (and its metadata)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputdata_2_matchinglinksset_and_its_metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      OutputData 2 : MatchingLinksSet (and its metadata)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method_overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_1_produce_raw_buildingevolution_from_building_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1 : Produce "raw" BuildingEvolution from Building Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step_2_refinement_and_quality_check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2 : Refinement and Quality Check
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2 : Refinement and Quality Check">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objectives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number_of_evolutions_detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of Evolutions Detected
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>ComputeBuildingEvolution</h1>
+
+<h2 id="process_computebuildingevolution">Process : ComputeBuildingEvolution<a class="headerlink" href="#process_computebuildingevolution" title="Permanent link">#</a></h2>
+<h3 id="inputdata_1_buildingdataset_year1">InputData 1 : BuildingDataSet_year1<a class="headerlink" href="#inputdata_1_buildingdataset_year1" title="Permanent link">#</a></h3>
+<p>BuildingDataSet at the oldest time (see Process BuildingDataPreparation)</p>
+<h3 id="inputdata_2_buildingdataset_year2">InputData 2 : BuildingDataSet_year2<a class="headerlink" href="#inputdata_2_buildingdataset_year2" title="Permanent link">#</a></h3>
+<p>BuildingDataSet at a more recent time (see Process BuildingDataPreparation)</p>
+<h3 id="outputdata_1_buildingevolutiondataset_and_its_metadata">OutputData 1 : BuildingEvolutionDataSet  (and its metadata)<a class="headerlink" href="#outputdata_1_buildingevolutiondataset_and_its_metadata" title="Permanent link">#</a></h3>
+<p>Dataset corresponding to evolutions of buildings data, structured after the BuildingEvolutionSchema depicted in this folder, with the correct file naming, that is prepared as a shapefile, and as a geopackage containing the dataset plus a dedicated stylesheet (BuildingEvolution_style.qml) and ready to display. (Shapefile <code>.shp</code>: A widely used and recognized format in GIS. GeoPackage <code>.gpkg</code>: A more modern format offering better performance and greater flexibility)
+A description of this dataset within Subdense “Dataset” registry.</p>
+<h3 id="outputdata_2_matchinglinksset_and_its_metadata">OutputData 2 : MatchingLinksSet (and its metadata)<a class="headerlink" href="#outputdata_2_matchinglinksset_and_its_metadata" title="Permanent link">#</a></h3>
+<p>MatchingLinks between homologous features from the 2011 and 2021 datasets. </p>
+<h3 id="method_overview">Method overview<a class="headerlink" href="#method_overview" title="Permanent link">#</a></h3>
+<p>Produce "raw" BuildingEvolution data based on two BuildingDataSet at time t1 and t2 (Step 1 below) 
+Refine the BuildingEvolution to identify evolutions that are related to evolution of products (i.e. data upgrades), and apply some quality control and some visual refinement  (Step 2 below).</p>
+<h3 id="step_1_produce_raw_buildingevolution_from_building_data">Step 1 : Produce "raw" BuildingEvolution from Building Data<a class="headerlink" href="#step_1_produce_raw_buildingevolution_from_building_data" title="Permanent link">#</a></h3>
+<p>This first step is fully automatic. It uses matching libraries to produce matching links and automatically derive BuildingEvolution from these links.  </p>
+<ol>
+<li><strong>Clone the Subdense Matching Repository</strong>:</li>
+<li>If not installed yet install GitHub Desktop available at <a href="https://desktop.github.com/">GitHub Desktop's official website</a>.</li>
+<li>Visit the <a href="https://github.com/subdense/matching">Subdense Matching repository on GitHub</a>.</li>
+<li>
+<p>Use GitHub Desktop to clone it to a local directory.</p>
+</li>
+<li>
+<p><strong>Add Input Data</strong>: </p>
+</li>
+<li>
+<p>Place input data in <code>/data/bati</code>, with two layers representing building data at times T1 and T2.</p>
+</li>
+<li>
+<p><strong>Install Python 3</strong>:</p>
+</li>
+<li>Ensure Python 3 is installed on your system. Download from <a href="https://www.python.org/downloads/">Python's official website</a>.</li>
+<li>Install jpype1, shapely, numpy,networkx, tqdm, pyogrio and geopandas using <code>pip3 install [module_name]</code>.</li>
+<li>Use <code>pip3</code> if multiple Python versions are installed; consider proxy settings if applicable.</li>
+<li></li>
+<li><strong>Option1 : use Visual Studio</strong> :</li>
+<li>Install Visual Studio Code from <a href="https://code.visualstudio.com/">Visual Studio Code's website</a>.</li>
+<li>Open Local Repository in Visual Studio Code:</li>
+<li>Navigate to the local <code>matching</code> repository.</li>
+<li>Right-click and select "Open with Visual Studio Code".</li>
+<li>Open <code>run.py</code> in Visual Studio Code.</li>
+<li>This script automates the execution of <code>matching.py</code> and applies the necessary data processing.</li>
+<li>Modify the script if needed to align with your data paths and settings.</li>
+</ol>
+<p><strong>Option2 : use command line</strong> : 
+   For users comfortable with the command line, the script can also be executed via a terminal using the following command:
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>run.py<span class="w"> </span>-layer1<span class="w"> </span>./data/fr/strasbourg_building_2011.gpkg<span class="w"> </span>-layer2<span class="w"> </span>./data/fr/strasbourg_building_2021.gpkg<span class="w"> </span>-attributes<span class="w"> </span><span class="s1">&#39;[&quot;HAUTEUR&quot;,&quot;ID&quot;]&#39;</span><span class="w"> </span>-output_prefix<span class="w"> </span>FR_STR<span class="w"> </span>-java_memory<span class="w"> </span>16G
+</code></pre></div>
+This command runs <code>run.py</code> with specific parameters:
+- <code>-layer1</code> and <code>-layer2</code> specify the paths to the building data for the years 2011 and 2021, respectively.
+- <code>-attributes</code> allows the inclusion of specific attributes in the analysis, such as 'HAUTEUR' and 'ID'.
+- <code>-output_prefix</code> sets the prefix for the output files, in this case 'FR_STR' for Strasbourg, France.
+- <code>-java_memory</code> allocates Java memory for the process, set here to 16 Gigabytes.
+Ensure that the paths and parameters are adjusted as per your specific data and system requirements.</p>
+<p>At the end of step 4, after running the code, two new files are generated in the <code>output_data</code> folder: <code>FR-STR_EVOLUTION</code> and <code>FR_STR_Matching_Links</code> in chosen formats.</p>
+<p>Prepare an entry in the Dataset.md registry to register these data -at least the Evolution dataset- and put the minimal info. </p>
+<ol>
+<li><strong>Apply Stylesheet</strong>:</li>
+<li>Open FR-STR-FUA-EVOLUTION in QGIS for analysis and visualization, apply the <code>BuildingEvolutionStyle</code> file from the "ComputeBuildingEvolution" folder for optimal display.</li>
+</ol>
+<h3 id="step_2_refinement_and_quality_check">Step 2 : Refinement and Quality Check<a class="headerlink" href="#step_2_refinement_and_quality_check" title="Permanent link">#</a></h3>
+<p>This step aims at refining the evolution to identify evolutions probably related by product evolution and to perform some first quality control on the result. </p>
+<h4 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>Data Refinement</strong>: Identify building evolutions related to the evolution of the BdTopo product and in the real world.</li>
+<li><strong>Quality Control</strong>: Perform an initial quality control to ensure data accuracy.</li>
+</ul>
+<h4 id="process">Process<a class="headerlink" href="#process" title="Permanent link">#</a></h4>
+<p>The <a href="../RefineEvolutionBDTopo.py">RefineEvolutionBDTopo.py</a> script is used to achieve the following refinements:</p>
+<ul>
+<li>Buildings of type <code>appeared</code> with an area less than 50 m² were identified and their type was changed to <code>stable</code>. The <code>evolutionProduct</code> field was updated to <code>Yes</code> and <code>evolutionEntities</code> to <code>No</code>.</li>
+<li>Buildings of type <code>split</code> were identified and their type was also changed to <code>stable</code>. The <code>evolutionProduct</code> field was updated to <code>Yes</code> and <code>evolutionEntities</code> to <code>No</code>.</li>
+<li>The data were verified using orthophoto images to ensure the quality of the results.</li>
+</ul>
+<h4 id="number_of_evolutions_detected">Number of Evolutions Detected<a class="headerlink" href="#number_of_evolutions_detected" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>Detected buildings of type appeared (&lt; 50 m²)</strong>: <code>105417</code></li>
+<li><strong>Detected buildings of type split</strong>: <code>451458</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>
