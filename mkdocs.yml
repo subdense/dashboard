@@ -24,7 +24,9 @@ nav:
   - Data:
     - Datasets: Datasets.md
     - Datasources: Datasources.md
-  - Maps: Maps/Maps.md
+  - Maps: 
+    - Maps Overview: Maps/Maps.md
+    - Strasbourg Variables: Maps/gridviz_plugin_strasbourg.html
   - Processes:
     - Processes: Processes/Processes.md
     - ComputeBuildingEvolution: Processes/ComputeBuildingEvolution.md

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Subdense</title>
+
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+            integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+            crossorigin=""
+        />
+
+        <style>
+            /* Remove margin */
+            body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden; /* Prevent potential scrollbars */
+            }
+            #map {
+                height: 100vh;
+                width: 100%; 
+            }
+            .legend {
+                padding: 10px;
+                background-color: white;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1000; /* Ensure the legend is on top of the map layers */
+                font-size: 12px;
+            }
+            .legend i {
+                width: 18px;
+                height: 18px;
+                float: left;
+                margin-right: 8px;
+                opacity: 0.8;
+            }
+            .legend-title {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            .legend-description {
+                font-size: 12px;
+                color: #555;
+                margin-bottom: 8px;
+            }
+            /* Make layer control always visible */
+            .leaflet-control-layers {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                padding: 6px 8px;
+                background: white;
+                box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+                border-radius: 5px;
+                min-width: 200px;  /* Add this line to make the box wider */
+            }
+            
+            .leaflet-control-layers-toggle {
+                display: none;  /* Hide the toggle button */
+            }
+            
+            .leaflet-control-layers-list {
+                display: block !important;  /* Always show the list */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="map">
+            <div class="legend">
+                </div>
+        </div> 
+    </body>
+
+</html>
+
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+<script src="https://unpkg.com/gridviz/dist/gridviz.min.js"></script>
+<script src="https://unpkg.com/leaflet-gridviz/dist/leaflet-gridviz.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-color@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-interpolate@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3"></script>
+        
+<script>
+        // Map setup
+        const leafletMap = L.map('map').setView([48.5787, 7.6248], 12);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        }).addTo(leafletMap);
+
+        // Prepare legend container
+        const legendDiv = document.querySelector('.legend');        legendDiv.className = 'legend';
+        
+        // Legend generation
+        function generateLegend(title, description, breaks, colors) {
+            const labels = breaks.map((grade, i) => 
+                i < breaks.length - 1 ?
+                `<i style="background:${colors[i]};width:18px;height:18px;display:inline-block;margin-right:8px;"></i>${grade}&ndash;${breaks[i + 1]}` :
+                `<i style="background:${colors[i]};width:18px;height:18px;display:inline-block;margin-right:8px;"></i>${grade}+`
+            );
+            return `
+                <div class="legend-title" style="font-weight:bold;margin-bottom:5px;">${title}</div>
+                <div class="legend-description" style="font-size:12px;color:#555;margin-bottom:8px;">${description}</div>
+                ${labels.join('<br>')}
+            `;
+        }
+
+        // Color functions for each layer
+        const colorFunctions = {
+            DensLayer: cell => {
+                const v = cell.total_volume_new;
+                if (v > 5000) return '#252525';
+                else if (v > 1000) return '#636363';
+                else if (v > 500) return '#969696';
+                else if (v > 100) return '#cccccc';
+                else return 'transparent';
+            },
+            CCILayer: cell => {
+                const v = cell.cci;
+                if (v > 0.8) return '#006d2c';
+                else if (v > 0.6) return '#2ca25f';
+                else if (v > 0.4) return '#66c2a4';
+                else if (v > 0.2) return '#b2e2e2';
+                else return '#edf8fb';
+            },
+            FSI11Layer: cell => {
+                const v = cell.total_area2011;
+                if (v > 8000) return '#252525';
+                else if (v > 6000) return '#636363';
+                else if (v > 4000) return '#969696';
+                else if (v > 2000) return '#cccccc';
+                else return '#f7f7f7';
+            },
+            ParkLayer: cell => {
+                const v = cell.m_to_park;
+                if (v > 2000) return '#ffffff';
+                else if (v > 1000) return '#99d594';
+                else if (v > 500) return '#31a354';
+                else if (v > 250) return '#006d2c';
+                else return '#004417';
+            },
+            TrainLayer: cell => {
+                const v = cell.m_to_train;
+                if (v > 2000) return '#ffffff';
+                else if (v > 1000) return '#bcbddc';
+                else if (v > 500) return '#807dba';
+                else if (v > 250) return '#6a51a3';
+                else return '#4a1486';
+            },
+            AmenityLayer: cell => {
+                const v = cell.amenity_count;
+                if (v > 20) return '#b30000';
+                else if (v > 10) return '#e34a33';
+                else if (v > 5) return '#fc8d59';
+                else if (v > 0) return '#fdcc8a';
+                else return '#ffffff';
+            }
+        };
+
+        // Legends for each layer
+        const legends = {
+            DensLayer: generateLegend(
+                "Residential Densification",
+                "Residential building volume in m<sup>3</sup> constructed<br>between 2011 and 2021",
+                [0, 100, 500, 1000, 5000], 
+                ['transparent', '#cccccc', '#969696', '#636363', '#252525']
+            ),
+            CCILayer: generateLegend(
+                "Regional Accessibility (CCI)",
+                "From 0 (most peripheral) to 1 (most central)",
+                [0, 0.2, 0.4, 0.6, 0.8],
+                ['#edf8fb','#b2e2e2','#66c2a4','#2ca25f','#006d2c']
+            ),
+            FSI11Layer: generateLegend(
+                "Built-up area in 2011 (total_area2011)",
+                "Share of grid cell covered by building footprints in 2011",
+                ["0%","25%", "40%", "60%", "80%"],
+                ['#f7f7f7', '#cccccc', '#969696', '#636363', '#252525']
+            ), 
+            ParkLayer: generateLegend(
+                "Distance to Parks (m_to_park)",
+                "Distance to nearest park or green space in meters",
+                [0, 250, 500, 1000, 2000],
+                ['#004417', '#006d2c', '#31a354', '#99d594', '#ffffff']
+            ),
+            TrainLayer: generateLegend(
+                "Distance to Train Stations (m_to_train)",
+                "Distance to nearest train station in meters",
+                [0, 250, 500, 1000, 2000],
+                ['#4a1486', '#6a51a3', '#807dba', '#bcbddc', '#ffffff']
+            ),
+            AmenityLayer: generateLegend(
+                "Amenity Count (amenity_count)",
+                "Number of amenities within a 500m radius",
+                [0, 0, 5, 10, 20],
+                ['#ffffff', '#fdcc8a', '#fc8d59', '#e34a33', '#b30000']
+            )
+        };
+
+        // Load CSV data and create gridviz layers
+        let gridLayers = {};
+
+        // Define your DensLayer first
+        gridLayers.DensLayer = new L.GridvizLayer({
+            proj: 'EPSG:3035',
+            onLayerDidMountCallback: (gridvizMap) => {
+                const dataset = new gridviz.CSVGrid(
+                    gridvizMap,
+                    'https://raw.githubusercontent.com/veragotze/leaflet_data/refs/heads/main/strasbourg.csv',
+                    100
+                );
+
+                const colorStyle = new gridviz.ShapeColorSizeStyle({ 
+                    color: colorFunctions.DensLayer
+                });
+                const strokeStyle = new gridviz.StrokeStyle({
+                    strokeColor: () => '#000000',
+                    strokeWidth: () => 5 
+                });
+
+                gridvizMap.layers = [new gridviz.GridLayer(dataset, [colorStyle, strokeStyle], { 
+                    minPixelsPerCell: 5
+                })];
+                gridvizMap._canvas.style.opacity = 0.7;
+            }
+        });
+
+        // Add DensLayer to map immediately
+        gridLayers.DensLayer.addTo(leafletMap);
+        legendDiv.innerHTML = legends.DensLayer;
+
+        // Define other layers
+        const layerDefinitions = {
+            CCILayer: "Regional Accessibility (CCI)",
+            FSI11Layer: "Built-up Area 2011",
+            ParkLayer: "Distance to Parks",
+            TrainLayer: "Distance to Train Stations",
+            AmenityLayer: "Amenity Count"
+        };
+
+        Object.entries(layerDefinitions).forEach(([key, title]) => {
+            gridLayers[key] = new L.GridvizLayer({
+                proj: 'EPSG:3035',
+                onLayerDidMountCallback: (gridvizMap) => {
+                    const dataset = new gridviz.CSVGrid(
+                        gridvizMap,
+                        'https://raw.githubusercontent.com/veragotze/leaflet_data/refs/heads/main/strasbourg.csv',
+                        100
+                    );
+
+                    const colorStyle = new gridviz.ShapeColorSizeStyle({ 
+                        color: colorFunctions[key]
+                    });
+                    const strokeStyle = new gridviz.StrokeStyle({
+                        strokeColor: () => '#000000',
+                        strokeWidth: () => 5
+                    });
+
+                    gridvizMap.layers = [new gridviz.GridLayer(dataset, [colorStyle, strokeStyle], { 
+                        minPixelsPerCell: 5
+                    })];
+                    gridvizMap._canvas.style.opacity = 0.7;
+                }
+            });
+        });
+
+        // Layer control setup
+        const baseLayers = {
+            "Residential Densification": gridLayers.DensLayer,
+            "Built-up Area 2011": gridLayers.FSI11Layer,
+            "Regional Accessibility (CCI)": gridLayers.CCILayer,
+            "Distance to Parks": gridLayers.ParkLayer,
+            "Distance to Train Stations": gridLayers.TrainLayer,
+            "Amenity Count": gridLayers.AmenityLayer
+        };
+
+        // Create layer control
+        const layerControl = L.control.layers(
+            baseLayers, 
+            null, 
+            { collapsed: false }
+        ).addTo(leafletMap);
+
+        // Update legend on layer change
+        leafletMap.on('baselayerchange', function(e) {
+            let foundKey = Object.keys(gridLayers).find(key => gridLayers[key] === e.layer);
+            if (foundKey) {
+                legendDiv.innerHTML = legends[foundKey];
+            }
+        });
+        
+</script>
