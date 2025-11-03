@@ -19,7 +19,6 @@ A description can be enclosed in this registry or in a separate file.
 * **Provenance** : The map was produced with the process CreateGHS_POP_2020_ALLCSR_reduced
 * **Usages** : 
 ![Map_GHS_POP_ALLCSR_2020](Map_GHS_POP_ALLCSR_2020.jpeg)
-![Map_GHS_POP_ALLCSR_2020](Map_GHS_POP_2020_Iasi.jpeg)
 
 ## Map_UK-LIV-FUA-Evolution-2011-21
 * **Title** : Evolutions of buildings in Liverpool functional area between 2011 and 2021
