@@ -10,7 +10,8 @@ A description can be enclosed in this registry or in a separate file.
  2. [Map_UK-LIV-FUA-Evolution-2011-21](#map_uk-liv-fua-evolution-2011-21)
  3. [Map_DE-DOR-FUA-Evolution-2011-21](#map_de-dor-fua-evolution-2011-21)
  4. [Map_FR-STR-FUA-Evolution-2011-21](#map_fr-str-fua-evolution-2011-21)
- 6. [Map description template](#map-description-template)
+ 5. [Map description template](#map-description-template)
+ 6. [Map_GHS_POP_2020_Iasi](#map_ghs_pop_2020_iasi)
 *******
 
 ## Map_GHS_POP_ALLCSR_2020
@@ -45,7 +46,13 @@ A description can be enclosed in this registry or in a separate file.
 * **Provenance** : Textual description of how the map was produced, what keys were used. This description can get enriched while the dataset is revised and improved (quality check and so on).
 * **Usages** : References to narratives that have been produced with this dataset
 * **Feedback** : Comments related to the map, interpretation, identification of quality issues and so on
-* **Access, Copyright** : 
+* **Access, Copyright** :
+
+## Map_GHS_POP_2020_Iasi
+* **Title** : Overview of population density within casestudy region
+* **Provenance** : The map was produced with the process CreateGHS_POP_2020
+* **Usages** : 
+![Map_GHS_POP_2020_Iasi](Map_GHS_POP_2020_Iasi.jpeg)
  
 
 
