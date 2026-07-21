@@ -13,10 +13,10 @@
 ## Dataset and Maps 
 
 * Orthophoto data 2024: input data
-** UAV-based true orthophotos Aerial photogrammetric flight from 2024 (April) Ultracam Eagle Mark 3  aerial camera from Vexcel 80% longitudinal and 60% transversal overlap
-*** Geometrically corrected,
-*** Computed using DSM information,
-*** Objects in their true location, but irregular building boundaries,
+* * UAV-based true orthophotos Aerial photogrammetric flight from 2024 (April) Ultracam Eagle Mark 3  aerial camera from Vexcel 80% longitudinal and 60% transversal overlap
+* * * Geometrically corrected,
+* * * Computed using DSM information,
+* * * Objects in their true location, but irregular building boundaries,
 *** No leaning building effects (building facades not included).
 ** 16 tiles, LZW Compression 0.084 m spatial resolution 4 bands (RGB, NIR)
 ** Coordinate Reference System: national Stereo 70, normal heights relative to the Black Sea vertical datum (EPSG:3844).
