@@ -24,7 +24,7 @@
 * Available Orthophotos 2011: input data
    * Orthophoto Aerial flights from 2011 taken with Leica ADS80 system mounted on Antonov 30 plane
    * 0.5 m spatial resolution, 3 spectral bands (RGB), Geotiff format, Coordinate Reference System: national Stereo 70 (EPSG:3844), Precision XY: < 1 m
-   * Source : google.com/url?q=https://geomil.ro/maps/7&sa=D&source=editors&ust=1784630099671187&usg=AOvVaw2u0R3iAIpj3dwO0qluxAyx 
+   * Source: google.com/url?q=https://geomil.ro/maps/7&sa=D&source=editors&ust=1784630099671187&usg=AOvVaw2u0R3iAIpj3dwO0qluxAyx 
 
 
 * Building footprints (2024): FLAIR-HUB2BF output dataset
