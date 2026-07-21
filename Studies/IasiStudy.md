@@ -10,7 +10,7 @@
 * Assessing the sustainability of urban development by measuring the balance between urban densification and urban growth. Such an assessment can provide evidence on whether urban development in Iasi city follows a compact and sustainable trajectory or is dominated by spatial growth.
 * Limited availability of open data for buildings and buildings changes spanning at least a decade. Inconsistent vector data and orthophoto data hinder the reliable monitoring of long-term urban densification and growth patterns.
 
-## Dataset and Maps 
+## Datasets and Maps 
 
 * Orthophoto data 2024: input data
   * UAV-based true orthophotos Aerial photogrammetric flight from 2024 (April) Ultracam Eagle Mark 3  aerial camera from Vexcel 80% longitudinal and 60% transversal overlap
