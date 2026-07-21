@@ -13,8 +13,8 @@
 ## Dataset and Maps 
 
 * Orthophoto data 2024: input data
-* * UAV-based true orthophotos Aerial photogrammetric flight from 2024 (April) Ultracam Eagle Mark 3  aerial camera from Vexcel 80% longitudinal and 60% transversal overlap
-* * * Geometrically corrected,
+  * UAV-based true orthophotos Aerial photogrammetric flight from 2024 (April) Ultracam Eagle Mark 3  aerial camera from Vexcel 80% longitudinal and 60% transversal overlap
+    * Geometrically corrected,
 * * * Computed using DSM information,
 * * * Objects in their true location, but irregular building boundaries,
 *** No leaning building effects (building facades not included).
