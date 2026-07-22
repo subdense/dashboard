@@ -71,7 +71,9 @@ will be no change history information for a feature.”
 
 ## OSM 
 * **status related to dashboard process** : has been used in experiences to generate building evolution data but not adopted yet.
-* **Feedback** : heterogeneity and lack of completeness in 2011 on some cities of interest
+* **Feedback** :
+   * heterogeneity and lack of completeness in 2011 on some cities of interest
+   * Study area Iasi, Romania : lack of data for 2011; lack of completeness for 2024 outside the city; sparse building in        suburbs; Low spatial accuracy with random geometric deviations.
 
 ## OSMASTERMAP-UK
 * **Documentation** : https://beta.ordnancesurvey.co.uk/products/os-mastermap-topography-layer 
@@ -134,5 +136,32 @@ An exploration of the data reveals that there have been no notable changes in th
 ## SITADEL-DAU-DemandesAutorisationUrbanisme-FR
 * **Acces aux données**: https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513f0189d7d312c80ec5b5b
 * **Documentation** :  https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513f0189d7d312c80ec5b5b
-* **Feedback** : Cette base permet de récupérer toutes les demandes de permis de construire et de travaux d'urbanisme depuis 2013, et leur suivi, en ne gardant que les travaux qui créent des logements. Les demandes sont localisées (voir méthode pour géoréférencer sur ce dashboard).    
+* **Feedback** : Cette base permet de récupérer toutes les demandes de permis de construire et de travaux d'urbanisme depuis 2013, et leur suivi, en ne gardant que les travaux qui créent des logements. Les demandes sont localisées (voir méthode pour géoréférencer sur ce dashboard).
+
+## True ORTHOPHOTO-RO 
+* **status related to dashboard process** : has been used on IasiStudy (2024)
+* **Description**: UAV-based true orthophotos Aerial photogrammetric flight from 2024 (April) Ultracam Eagle Mark 3  aerial camera from Vexcel 80% longitudinal and 60% transversal overlap
+    * Geometrically corrected,
+    * Computed using DSM information,
+    * Objects in their true location, but irregular building boundaries,
+    * No leaning building effects (building facades not included),
+    * 16 tiles, LZW Compression 0.084 m spatial resolution 4 bands (RGB, NIR)
+  * Coordinate Reference System: national Stereo 70, normal heights relative to the Black Sea vertical datum (EPSG:3844).
+* **Available Documentation** : https://geomil.ro/maps/7](https://www.cartografie.ro/index.php/ro/features/cariera/item/216-realizarea-de-true-ortofotoplanuri-pentru-320-de-unitati-administrativ-teritoriale-din-mediul-urban
+
+## ORTHOPHOTO-RO 
+* **status related to dashboard process** : has been used on IasiStudy (2011)
+* **Description**:
+    * Orthophoto Aerial flights from 2011 taken with Leica ADS80 system mounted on Antonov 30 plane
+    * 0.5 m spatial resolution, 3 spectral bands (RGB), Geotiff format, Coordinate Reference System: national Stereo 70   (EPSG:3844), Precision XY: < 1 m
+* **Available Documentation** : https://en.geomil.ro/
+  
+## ANCPI BUILDINGS-RO 
+* **status related to dashboard process** : has been used in experiences to generate building evolution data in IasiStudy (2024) but not adopted yet.
+* **Available Documentation** : https://geomil.ro/maps/7
+* * **Feedback** :
+  * Limited access to current, historical, low completeness, High spatial accuracy
+  * Dataset building footprints from the National Agency for Cadastre and Land Registration (ANCPI) for Iasi covers constructions from 2009 to 2018, without specifying the exact year of construction. So, it is no possible to derive two reliable datasets to build a decade densification study. 
+
+
 
