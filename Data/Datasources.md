@@ -19,6 +19,9 @@ List of datasources mentioned, investigated, possibly used for the dashboard. Th
  14. [CadastralData-FR](#cadastraldata-fr)
  15. [FONCIER-CEREMA-FR](#foncier-cerema-fr)
  16. [SITADEL-DAU-DemandesAutorisationUrbanisme-FR](#SITADEL-DAU-DemandesAutorisationUrbanisme-FR)
+ 17. [TRUE ORTHOPHOTO-RO]()
+ 18. [ORTHOPHOTO-RO]()
+ 19. [ANCPI BUILDING-RO]()
 *******
 
 ## BDTOPO-FR 
