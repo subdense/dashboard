@@ -24,7 +24,7 @@
   * Source: The dataset is available as open data (**link to be added**).
 
 * Building footprints (2011): reference dataset
-  * The dataset is produced through collaborative annotation using the Annotator tool (see the description of the process: BuildingsFootprintsAnnotation.md).
+  * The dataset is produced through collaborative annotation using the Annotator tool (see the description of the process: [BuildingsFootprintsAnnotation.md](https://github.com/subdense/dashboard/blob/master/Processes/BuildingsFootprintsAnnotation.md)).
   * It contains the building footprints of the study area for the year 2011.
   * Owing to the annotation methodology and its validated quality, this dataset can be considered as ground truth (reference) data.
   * Source: The dataset is available as open data (**link to be added**).
