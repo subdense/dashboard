@@ -17,22 +17,6 @@
 * Limited availability of open data for buildings and buildings changes spanning at least a decade. Inconsistent vector data and orthophoto data hinder the reliable monitoring of long-term urban densification and growth patterns.
 
 ## Datasets and Maps 
-
-* Orthophoto data 2024: input data
-  * UAV-based true orthophotos Aerial photogrammetric flight from 2024 (April) Ultracam Eagle Mark 3  aerial camera from Vexcel 80% longitudinal and 60% transversal overlap
-    * Geometrically corrected,
-    * Computed using DSM information,
-    * Objects in their true location, but irregular building boundaries,
-    * No leaning building effects (building facades not included),
-    * 16 tiles, LZW Compression 0.084 m spatial resolution 4 bands (RGB, NIR)
-  * Coordinate Reference System: national Stereo 70, normal heights relative to the Black Sea vertical datum (EPSG:3844).
-  * website: https://www.cartografie.ro/index.php/ro/features/cariera/item/216-realizarea-de-true-ortofotoplanuri-pentru-320-de-unitati-administrativ-teritoriale-din-mediul-urban
-* Available Orthophotos 2011: input data
-   * Orthophoto Aerial flights from 2011 taken with Leica ADS80 system mounted on Antonov 30 plane
-   * 0.5 m spatial resolution, 3 spectral bands (RGB), Geotiff format, Coordinate Reference System: national Stereo 70 (EPSG:3844), Precision XY: < 1 m
-   * Source: google.com/url?q=https://geomil.ro/maps/7&sa=D&source=editors&ust=1784630099671187&usg=AOvVaw2u0R3iAIpj3dwO0qluxAyx 
-
-
 * Building footprints (2024): FLAIR-HUB2BF output dataset
   * The dataset is produced using the FLAIR-HUB2BF process applied to the 2024 orthophotographs (see the description of the process: link to be added).
   * It contains the building footprints of the study area for the year 2024.
