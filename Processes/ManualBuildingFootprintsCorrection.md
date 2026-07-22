@@ -14,8 +14,12 @@ A description of this dataset within Subdense “IasiStudy” registry.
 
 ## Tool used : OGIS
   
-## Step 1 : Import BuildingDataSet in QGIS and import an ortophoto consisten with the date of the BuildingDataSet (same year)
-## Step 2 : Make a copy of BuildingDataSet and rename it BuildingDataSet_GT 
-## Step 3 : Activate Edit geometry mode in QGIS for the layer BuildingDataSet_GT
+## Step 1 : Import data 
+* Import in QGIS BuildingDataSet and the ortophoto 
+## Step 2 : Copy BuildingDataSet
+* Make a copy of BuildingDataSet and rename it BuildingDataSet_GT 
+## Step 3 : Geometry edition 
+* Activate Edit geometry mode in QGIS for the layer BuildingDataSet_GT
 * The expert operator make editions: geometries modifications, add missing buildings, and remove false detections to ensure high geometric accuracy and completeness.
-## Step 4 : Remove the edit mode, save the layer in GeoPackage format. 
+## Step 4 : Save BuildingDataSet_GT
+* Remove the edit mode, save the layer in GeoPackage format and prepare it for publication in open source. 
