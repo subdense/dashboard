@@ -19,9 +19,9 @@ List of datasources mentioned, investigated, possibly used for the dashboard. Th
  14. [CadastralData-FR](#cadastraldata-fr)
  15. [FONCIER-CEREMA-FR](#foncier-cerema-fr)
  16. [SITADEL-DAU-DemandesAutorisationUrbanisme-FR](#SITADEL-DAU-DemandesAutorisationUrbanisme-FR)
- 17. [TRUE ORTHOPHOTO-RO]()
- 18. [ORTHOPHOTO-RO]()
- 19. [ANCPI BUILDING-RO]()
+ 17. [TRUE ORTHOPHOTO-RO](#True-ORTHOPHOTO-RO)
+ 18. [ORTHOPHOTO-RO](#ORTHOPHOTO-RO)
+ 19. [ANCPI BUILDING-RO](#ANCPI-BUILDINGS-RO)
 *******
 
 ## BDTOPO-FR 
@@ -150,7 +150,7 @@ An exploration of the data reveals that there have been no notable changes in th
     * No leaning building effects (building facades not included),
     * 16 tiles, LZW Compression 0.084 m spatial resolution 4 bands (RGB, NIR)
   * Coordinate Reference System: national Stereo 70, normal heights relative to the Black Sea vertical datum (EPSG:3844).
-* **Available Documentation** : https://geomil.ro/maps/7](https://www.cartografie.ro/index.php/ro/features/cariera/item/216-realizarea-de-true-ortofotoplanuri-pentru-320-de-unitati-administrativ-teritoriale-din-mediul-urban
+* **Available Documentation** : https://www.cartografie.ro/index.php/ro/features/cariera/item/216-realizarea-de-true-ortofotoplanuri-pentru-320-de-unitati-administrativ-teritoriale-din-mediul-urban
 
 ## ORTHOPHOTO-RO 
 * **status related to dashboard process** : has been used on IasiStudy (2011)
