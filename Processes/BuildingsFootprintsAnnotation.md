@@ -15,7 +15,7 @@ performance and greater flexibility)
 A description of this dataset within Subdense “IasiStudy” registry.
 
 ## Tool used : 
-* the Tool name Annotator (https://github.com/subdense/annotator) is used
+* the tool Annotator (https://github.com/subdense/annotator) is used
 
 ## Method overview
 * Produce building footprints for a past reference year (Year 1) from building footprints available for a more recent year (Year 2) using a collaborative annotation approach involving volunteers during mapathons.
