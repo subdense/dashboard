@@ -1,7 +1,7 @@
 # Process : BuildingsFootprintsAnnotation
 
 * This is the description of the process that allows to generate building footprints for
-* IasiStudy (https://github.com/subdense/dashboard/blob/master/Studies/IasiStudy.md) for the year 2011. This was needed because of the lack of the building footprints in 2011. 
+the IasiStudy (https://github.com/subdense/dashboard/blob/master/Studies/IasiStudy.md) for the year 2011. This was needed because of the lack of the building footprints in 2011. 
 ## InputData 1 : Orthophoto_year1
 Orthophoto for the study area at the oldest time 
 ## InputData 2 : Orthophoto_year2 
