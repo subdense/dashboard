@@ -15,7 +15,8 @@ A description of this dataset within [Subdense “IasiStudy”](https://github.c
 * QGIS
 
 ## Method overview
- ii) ; iii) . This is achieved by a home-made python algorithm
+The method consists in generating building footprints at a given date from orthophoto. We named this processing step FLAIR-HUB2BF, where BF stands for building footprint. To achive this goal, we propose four sub-steps: i) apply the existing FLAIR-HUB model \cite{ign2025flairhub} to infer land cover (LC) classification at the pixel level; ii) binarization of the resulting LC classification to obtain a binary mask containing only building; and iii) segment the binary mask to generate vector polygons. 
+
 ## Step 1 : Apply FLAIR-HUB model to infer LC classes
 * to apply FLAIR-HUB model for windows in order to infer LC classes, please follows the [Manual](https://github.com/subdense/dashboard/blob/master/Processes/INSTALL-FLAIR-HUB-MODEL.pdf)
 * The output of the model is raster image, where each pixel is classified with respect to the [nomenclature](https://www.sciencedirect.com/science/article/pii/S0924271626001899).
