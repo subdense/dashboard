@@ -141,7 +141,7 @@ An exploration of the data reveals that there have been no notable changes in th
 * **Documentation** :  https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=6513f0189d7d312c80ec5b5b
 * **Feedback** : Cette base permet de récupérer toutes les demandes de permis de construire et de travaux d'urbanisme depuis 2013, et leur suivi, en ne gardant que les travaux qui créent des logements. Les demandes sont localisées (voir méthode pour géoréférencer sur ce dashboard).
 
-## True ORTHOPHOTO-RO 
+## TRUE ORTHOPHOTO-RO 
 * **status related to dashboard process** : has been used on IasiStudy (2024)
 * **Description**: UAV-based true orthophotos Aerial photogrammetric flight from 2024 (April) Ultracam Eagle Mark 3  aerial camera from Vexcel 80% longitudinal and 60% transversal overlap
     * Geometrically corrected,
