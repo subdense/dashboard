@@ -1,0 +1,9 @@
+#Binarization will be performed using the QGIS software's OSGeo4W Shell terminal
+#Creating a binary raster where Buildings have a value of 1 and the rest have a value of 0
+
+C:\Program Files\QGIS 3.40.2>python "C:\Program Files\QGIS 3.40.2\apps\Python312\Scripts\gdal_calc-script.py"
+ -A "D:\(File path for the Flair-HUB pipeline output containing the 15 LC classes in .tif format)"
+ --outfile="D:\(The name and path of the new binary file in .tif format)"
+ --calc="(A==0)*1"
+ --NoDataValue=0
+ --type=Byte
