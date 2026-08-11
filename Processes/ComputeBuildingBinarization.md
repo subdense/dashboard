@@ -11,6 +11,6 @@ the IasiStudy (https://github.com/subdense/dashboard/blob/master/Studies/IasiStu
 
 ## Tools used 
 * Binarization will be performed using the QGIS software's OSGeo4W Shell terminal
-* link to the algorithm to be added
+* [link to the algorithm](https://github.com/subdense/dashboard/blob/master/Processes/Building_Binarization.txt)
 
 ## Method
