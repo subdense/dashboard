@@ -10,7 +10,7 @@ the IasiStudy (https://github.com/subdense/dashboard/blob/master/Studies/IasiStu
 * polygons
 
 ## Tools used 
-* Polygon vectorization will be performed using the "Building_Segmentation" Python script within the FLAIR-HUB pipeline
+* Polygon vectorization will be performed using the "Building_Segmentation.py" Python script within the FLAIR-HUB pipeline
 * link to the algorithm (https://github.com/subdense/dashboard/blob/master/Processes/Building_Segmentation.py)
 
 ## Method
