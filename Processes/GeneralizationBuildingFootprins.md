@@ -5,8 +5,10 @@
 contained excessive geometric detail and irregular boundaries.
 
 ## InputData 1 : building  footprints for 2024
+* vector polygon class building
 
-## OutputData 1 : building  footprints for 2024 
+## OutputData 1 : building  footprints for 2024
+* vector polygon class building
 
 ## Tools used 
 * link to the algorithm to be added
