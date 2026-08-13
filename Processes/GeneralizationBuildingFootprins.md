@@ -17,7 +17,8 @@ contained excessive geometric detail and irregular boundaries.
 
 ##Step 1 : filtering
 * Filter building having less than 10m2
-* The filter is applied in QGIS by using the area attribute 
+* The filter is applied in QGIS by using the area attribute
+
 ##Step 2 : Generalisation
 * Apply Douglas-Peucker with the following parameters
 * The parameter provided to the algorithm is the Tolerance, expressed in the units of the coordinate system - in this case, meters
