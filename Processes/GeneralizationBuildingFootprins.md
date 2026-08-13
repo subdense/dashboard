@@ -15,7 +15,7 @@ contained excessive geometric detail and irregular boundaries.
 
 ## Method
 
-##Step 1 : filtering
+##Step 1 : Filtering
 * Filter building having less than 10m2
 * The filter is applied in QGIS by using the area attribute
 
