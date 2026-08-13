@@ -11,7 +11,7 @@ contained excessive geometric detail and irregular boundaries.
 * vector polygon class building
 
 ## Tools used 
-* link to the algorithm to be added
+* link to the algorithm Processes/Generalization_Building_Footprins.py
 
 ## Method
 
