@@ -1,11 +1,11 @@
-# Process : FLAIR-HUB2BF
+# Process : FLAIR-HUB2BF workflow
 
-* This is the description of the process FLAIR-HUB2BF which consists in generating building footprints for
+* This is the description of the process FLAIR-HUB2BF workflow which consists in generating building footprints for
 the IasiStudy (https://github.com/subdense/dashboard/blob/master/Studies/IasiStudy.md) for the year 2024. This was needed because of the lack of the reliable building footprints in 2024. 
 ## InputData 1 : Orthophoto_year1
 Orthophoto for the study area in year 2024 : RO-IAS-Orthophoto-2024.
 
-## OutputData 1 : RO-IAS-Building-2021 (and its metadata)
+## OutputData 1 : RO-IAS-Building-2024 (and its metadata)
 Dataset corresponding to building footprints for 2024, structured as a geopackage containing the dataset. (GeoPackage `.gpkg`: A more modern format offering better performance and greater flexibility)
 A description of this dataset within [Subdense “IasiStudy”](https://github.com/subdense/dashboard/blob/master/Studies/IasiStudy.md) registry.
 
