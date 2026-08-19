@@ -1,11 +1,10 @@
 # Process: GeneralizationBuildingFootprins
 
-* This process describes Step 4 of the FLAIR-HUB2BF process (https://github.com/subdense/dashboard/blob/master/Processes/FLAIR-HUB2BF.md), and aims to remove noise and smooth the building footprints generated for the IasiStudy 
-(https://github.com/subdense/dashboard/blob/master/Studies/IasiStudy.md) area in 2024. This post-processing  was necessary because the automatically extracted building footprints 
+* This process describes Step 4 of the [FLAIR-HUB2BF.md](https://github.com/subdense/dashboard/blob/master/Processes/FLAIR-HUB2BF.md) process, and aims to remove noise and smooth the building footprints generated for the [Studies/IasiStudy.md](https://github.com/subdense/dashboard/blob/master/Studies/IasiStudy.md) area in 2024. This post-processing  was necessary because the automatically extracted building footprints 
 contained excessive geometric detail and irregular boundaries.
 
 ## InputData 1 : building  footprints obtained for 2024 after a segmentation process
-* Reminder: the segmentation layer (https://github.com/subdense/dashboard/blob/master/Processes/ComputeBuildingSegmentation.md)
+* Reminder: the segmentation layer [ComputeBuildingSegmentation.md](https://github.com/subdense/dashboard/blob/master/Processes/ComputeBuildingSegmentation.md)
 * Vector layer containing building footprints as polygons
 
 ## OutputData 1 : building  footprints for 2024
