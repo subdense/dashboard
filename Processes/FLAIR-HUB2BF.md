@@ -15,7 +15,7 @@ A description of this dataset within [Subdense “IasiStudy”](https://github.c
 * QGIS
 
 ## Method overview
-The method consists in generating building footprints at a given date from orthophoto. We named this processing step FLAIR-HUB2BF, where BF stands for building footprint. To achive this goal, we propose four sub-steps: i) apply the existing FLAIR-HUB model \cite{ign2025flairhub} to infer land cover (LC) classification at the pixel level; ii) binarization of the resulting LC classification to obtain a binary mask containing only building; and iii) segment the binary mask to generate vector polygons. 
+The method consists in generating building footprints at a given date from orthophoto. We named this processing step FLAIR-HUB2BF, where BF stands for building footprint. To achive this goal, we propose four sub-steps: i) apply the existing [FLAIR-HUB model] (https://ignf.github.io/FLAIR/FLAIR-HUB/flairhub_fr.html) to infer land cover (LC) classification at the pixel level; ii) binarization of the resulting LC classification to obtain a binary mask containing only building; and iii) segment the binary mask to generate vector polygons. 
 
 ## Step 1 : Apply FLAIR-HUB model to infer LC classes
 * to apply FLAIR-HUB model for windows in order to infer LC classes, please follows the [Manual](https://github.com/subdense/dashboard/blob/master/Processes/INSTALL-FLAIR-HUB-MODEL.pdf)
@@ -28,6 +28,9 @@ The method consists in generating building footprints at a given date from ortho
 * The process is described here. [ComputeBuildingSegmentation.md](https://github.com/subdense/dashboard/blob/master/Processes/ComputeBuildingSegmentation.md)
 ## Step 4 : Generalization
 * This step is a post-processing which is applied to remove noise and generalize building by using Douglas-Peucker.
-* The process is described here. [GeneralizationBuildingFootprins.md ](https://github.com/subdense/dashboard/blob/master/Processes/GeneralizationBuildingFootprins.md)
+* The process is described here. [GeneralizationBuildingFootprins.md](https://github.com/subdense/dashboard/blob/master/Processes/GeneralizationBuildingFootprins.md)
 ## Step 5 : Apply the data schema and naming conventions, then generate a GeoPackage 
+* This step is a post-processing which is applied to define the data schema (id, area, etc.)
+* The input dataset is those obtained in step 4 [GeneralizationBuildingFootprins.md](https://github.com/subdense/dashboard/blob/master/Processes/GeneralizationBuildingFootprins.md).
+* This schema data and the type of the file can be modified with respect to the user needs.
 
