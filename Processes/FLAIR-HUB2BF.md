@@ -1,7 +1,7 @@
 # Process : FLAIR-HUB2BF workflow
 
 * This is the description of the process FLAIR-HUB2BF workflow which consists in generating building footprints for
-the IasiStudy (https://github.com/subdense/dashboard/blob/master/Studies/IasiStudy.md) for the year 2024. This was needed because of the lack of the reliable building footprints in 2024. 
+the [Subdense “IasiStudy”](https://github.com/subdense/dashboard/blob/master/Studies/IasiStudy.md) for the year 2024. This was needed because of the lack of the reliable building footprints in 2024. 
 ## InputData 1 : Orthophoto_year1
 Orthophoto for the study area in year 2024 : RO-IAS-Orthophoto-2024.
 
@@ -15,7 +15,7 @@ A description of this dataset within [Subdense “IasiStudy”](https://github.c
 * QGIS
 
 ## Method overview
-The method consists in generating building footprints at a given date from orthophoto. We named this processing step FLAIR-HUB2BF, where BF stands for building footprint. To achive this goal, we propose four sub-steps: i) apply the existing [FLAIR-HUB model] (https://ignf.github.io/FLAIR/FLAIR-HUB/flairhub_fr.html) to infer land cover (LC) classification at the pixel level; ii) binarization of the resulting LC classification to obtain a binary mask containing only building; and iii) segment the binary mask to generate vector polygons. 
+The method consists in generating building footprints at a given date from orthophoto. We named this processing step FLAIR-HUB2BF, where BF stands for building footprint. To achive this goal, we propose four sub-steps: i) apply the existing [FLAIR-HUB model](https://ignf.github.io/FLAIR/FLAIR-HUB/flairhub_fr.html) to infer land cover (LC) classification at the pixel level; ii) binarization of the resulting LC classification to obtain a binary mask containing only building; and iii) segment the binary mask to generate vector polygons. 
 
 ## Step 1 : Apply FLAIR-HUB model to infer LC classes
 * to apply FLAIR-HUB model for windows in order to infer LC classes, please follows the [Manual](https://github.com/subdense/dashboard/blob/master/Processes/INSTALL-FLAIR-HUB-MODEL.pdf)
