@@ -22,7 +22,7 @@ The method consists in generating building footprints at a given date from ortho
 * The output of the model is raster image, where each pixel is classified with respect to the [nomenclature](https://www.sciencedirect.com/science/article/pii/S0924271626001899).
 ## Step 2 : Binarization 
 * Consists in binarization of the resulting LC classification to obtain a binary mask containing only building pixels (LC class equals 0).
-* The process is described here. [ComputeBuildingBinzarization.md](https://github.com/subdense/dashboard/blob/master/Processes/ComputeBuildingBinzarization.md)
+* The process is described here. [ComputeBuildingBinarization.md](https://github.com/subdense/dashboard/blob/master/Processes/ComputeBuildingBinarization.md)
 ## Step 3 : Segmentation
 * Consistis in applying a segmentation algorithm in order to segment the binary which enables the delineation of building footprints in vector format (polygons).
 * The process is described here. [ComputeBuildingSegmentation.md](https://github.com/subdense/dashboard/blob/master/Processes/ComputeBuildingSegmentation.md)
