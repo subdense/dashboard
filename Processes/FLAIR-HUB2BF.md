@@ -18,7 +18,7 @@ A description of this dataset within [Subdense “IasiStudy”](https://github.c
 The method consists in generating building footprints at a given date from orthophoto. We named this processing step FLAIR-HUB2BF, where BF stands for building footprint. To achive this goal, we propose four sub-steps: i) apply the existing [FLAIR-HUB model](https://ignf.github.io/FLAIR/FLAIR-HUB/flairhub_fr.html) to infer land cover (LC) classification at the pixel level; ii) binarization of the resulting LC classification to obtain a binary mask containing only building; and iii) segment the binary mask to generate vector polygons. 
 
 ## Step 1 : Apply FLAIR-HUB model to infer LC classes
-* to apply FLAIR-HUB model for windows in order to infer LC classes, please follows the [Manual](https://github.com/subdense/dashboard/blob/master/Processes/INSTALL-FLAIR-HUB-MODEL.pdf)
+* To apply FLAIR-HUB model for windows in order to infer LC classes, please follows the [Manual](https://github.com/subdense/dashboard/blob/master/Processes/INSTALL-FLAIR-HUB-MODEL.pdf)
 * The output of the model is raster image, where each pixel is classified with respect to the [nomenclature](https://www.sciencedirect.com/science/article/pii/S0924271626001899).
 ## Step 2 : Binarization 
 * Consists in binarization of the resulting LC classification to obtain a binary mask containing only building pixels (LC class equals 0).
