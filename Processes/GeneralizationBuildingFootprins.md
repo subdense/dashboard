@@ -4,7 +4,8 @@
 (https://github.com/subdense/dashboard/blob/master/Studies/IasiStudy.md) area in 2024. This post-processing  was necessary because the automatically extracted building footprints 
 contained excessive geometric detail and irregular boundaries.
 
-## InputData 1 : building  footprints obtained for 2024 after a segmentation process (https://github.com/subdense/dashboard/blob/master/Processes/ComputeBuildingSegmentation.md)
+## InputData 1 : building  footprints obtained for 2024 after a segmentation process
+* Reminder: the segmentation layer (https://github.com/subdense/dashboard/blob/master/Processes/ComputeBuildingSegmentation.md)
 * Vector layer containing building footprints as polygons
 
 ## OutputData 1 : building  footprints for 2024
