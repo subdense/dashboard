@@ -18,7 +18,7 @@
 
 ## Datasets and Maps 
 * RO-IAS-Building-2024
-  * The dataset is produced using the FLAIR-HUB2BF process applied to the 2024 orthophotographs (see the description of the process: link to be added).
+  * The dataset is produced using the FLAIR-HUB2BF process applied to the 2024 orthophotographs (see the description of the workflow: [FLAIR-HUB2BF.md](https://github.com/subdense/dashboard/blob/master/Processes/FLAIR-HUB2BF.md)).
   * It contains the building footprints of the study area for the year 2024.
   * Further details on the methodology and dataset are provided in Crenganis et al. (2026) (**10.5194/isprs-archives-xlix-b4-2026-25-2026**).
   * Source: The dataset is available as open data (**link to be added**).
