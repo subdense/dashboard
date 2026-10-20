@@ -5,11 +5,21 @@ Analyse des changements de bâtiments sur le campus Descartes de Marne-La-Vallé
 
 # Identification de changements spécifiques 
 
-
+Construction de bâtiments lors du développement de la cité Descartes
+Transformation de bâtiments depuis 1945 qui existent encore sous une forme aujourd'hui
+Densification de parcelles, apparition de zones urbaines
 
 # Analyse des sources de données et outils 
 
-Analyse des sources de données dispo, à quelles dates, quelles analyses possibles pour détecter et représenter de tels changements, quels obstacles
+BDTopo : 
+
+Différentiels BDTopo : 
+
+Photos aériennes, orthos photos, mosaïques : 
+
+Cartes  : 
+
+... ajouter cadastre, données INSEE
 
 
 # jeux produits, descriptif projet QGIS  
