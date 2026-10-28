@@ -1,12 +1,11 @@
-This github repository is developed in the context of a research project and is open to anyone who wishes to contribute. Please feel free to join us.
-It is a proof of concept of a collaborative dashboard to observe and study building changes in the context of densification, which requires sharing different expertises : 
-- **using vintages of regional or national surveys to detect and model changes in city region areas on the past decades**, currently topographic building surveys in France, UK and Germany : this expertise is shared through users feedbacks on the datasources fitness for use (see Data>Datasource>BDTopo), through research GIS algorithms and a generic procedure (see Processes>ProduceBuildingChange)   < , based on automated spatial analysis tools and different vintages of topographic building data.
-- **clarifying concepts and proposing new materials for evidence-based discussions** that are needed to speak about densification, possibly inform controversy, based on a collaboration between persons with complementary perspectives on densification. This is achieved through gathering information in the Concepts section and producng comparable maps.
-- **comparative studies across cities and countries**, based on reproducible methods and on the explicitation of information that could biase comparison (differences in data, differences in context).  
+This collaborative dashboard aims at detecting and mapping changes in urban functional areas, like for example apparition of built up areas, or roof-stacking of existing buildings. Detection process rely on vintages of regional or national surveys. Such comparative maps of changes can support scientific studies and open debates about these changes. Please feel free to use this dashboard maps and tools,  published on the website of this git or to contribute to it. 
+ 
+How to contribute : 
+* publish the study of a new territory : what changes are studied, what data and process to detect them and represent them on a map
+* share your expertise related to a datasource : either in the Data folder or within a specific Study
+* share your expertise related to a process : either in the Processes folder or within a specific Study 
+* share metadata about produced datasets or maps : either in the Data and Maps folders or within a specific Study 
+* share your expertise related to concepts : clarifying them or proposing new materials for evidence-based discussions
 
-The organisation of these different ressources is structured after a generic BuildingChange model, depicted in the file Dashboard-BuildingChangeModel. 
-
-*This git does not contain data but rather*: the specification of concepts, the description of datasets and maps to be produced, the description of the production process and the analysis of the maps. Studies are explicit expression of questions for a given city of interest and specification of maps that can bring evidence to answer them. Maps are description of some maps with all information required for the map to be legible (scope, title, usage, files, focus views to be displayed on web site). A map is associated with a full resolution dataset ready to visualise on a GIS software (geopackage) for thorough reading, which is not available on the git but on a research data platform. Concepts are definitions, comparability of concepts across the studied countries, as well as how to put these concepts on maps through data. Data identify and describe data sources relevant to the dashboard, a well as specific datasets produced during the studies. Processes are descriptions of useful processes for the maps design (extracting datasets from the sources, processing them, rendering) and associated tools. 
-
-This work is developed by the partners of the ORA7 Subdense 2023-25 project. More information on SUBDENSE project: [SUBDENSE project website](https://bbv.raumplanung.tu-dortmund.de/research/projects/subdense/)
+The dashboard is named after the ORA7 [SUBDENSE](https://bbv.raumplanung.tu-dortmund.de/research/projects/subdense/) 2023-25 project. This work has been funded by the french ANR grant ANR-22-ORAR-0004-04, the german DFG grant 502663987 and by the british ESRC grant ES/X008290/1. 
 
