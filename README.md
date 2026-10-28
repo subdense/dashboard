@@ -1,4 +1,8 @@
-This collaborative dashboard aims at detecting and mapping changes in urban functional areas, like for example apparition of built up areas, or roof-stacking of existing buildings. Detection process rely on vintages of regional or national surveys. Such comparative maps of changes can support scientific studies and open debates about these changes. Please feel free to use this dashboard maps and tools,  published on the website of this git or to contribute to it. 
+This collaborative dashboard aims at detecting changes in different urban functional areas, like for example apparition of built up areas, or roof-stacking of existing buildings, based on available data and at stylising these changes on maps :  
+* A preliminary step consists in scoping a specific area of interest and temporal extent for changes detection, as well as entities. 
+* Detection process mainly relies on comparing different vintages of regional or national surveys to detect changes in the data and analysing the source documentation to evaluate what changes in data are explained by changes in the survey process, and what changes are explained by a change in reality.
+* Stylising changes on maps requires adopting an appropriate style for the map to be legible.
+Such comparative maps of changes can support scientific studies and open debates about these changes. Please feel free to use this dashboard maps and tools,  published on the website of this git or to contribute to it. 
  
 How to contribute : 
 * publish the study of a new territory : what changes are studied, what data and process to detect them and represent them on a map
