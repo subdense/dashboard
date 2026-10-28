@@ -1,6 +1,4 @@
 # BuildingChanges Portfolio
 
-This porfolio is a set of visual material used to clarify specific characteristics of BuildingChanges relevant to densification, and how to name them. 
-It is associated to an annotation layer of the dataset FR-STR-FUA-Evolution-2011-21 
+This porfolio is a set of specific situations of changes in building entities that are documented with data and with narratives from different experts. 
 
-Note: the portfolio is currently edited before being shared through the git 
