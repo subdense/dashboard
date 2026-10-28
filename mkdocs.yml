@@ -29,7 +29,7 @@ nav:
     - GridVisualisation: Maps/GridVisualisation.md
   - Processes:
     - Processes: Processes/Processes.md
-    - ComputeBuildingEvolution: Processes/ComputeBuildingEvolution.md
+    - ComputeBuildingChange: Processes/ComputeBuildingChange.md
     - ComputeChangeInBuiltup_area: Processes/ComputeChangeInBuiltup_area.md
     - DeliminateStudyArea: Processes/DeliminateStudyArea.md
     - PrepareBuildingData: Processes/PrepareBuildingData.md
