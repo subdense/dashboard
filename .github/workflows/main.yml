@@ -8,16 +8,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: 3.x
       - name: Install Python dependencies
         run: |
           pip install setuptools wheel
-          pip install mkdocs-material
+          pip install mkdocs-material mkdocs-literate-nav
           pip install mkdocs-macros-plugin
           pip install pymdown-extensions
+      - name: create symbolic links for markdown files in Studies/
+        run: |
+          for file in Studies/*.md; do 
+            ln -sf "$(pwd)/$file" docs/Studies/
+          done
       - name: Deploy site
         run: |
           mkdocs gh-deploy --force

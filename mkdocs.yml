@@ -5,6 +5,7 @@ theme:
   name: material
 plugins:
   - search
+  - literate-nav
 markdown_extensions:
   - toc:
       permalink: "#"
@@ -22,18 +23,17 @@ nav:
   - Home: index.md
   - Concepts: Concepts.md
   - Data:
-    - Datasets: Datasets.md
-    - Datasources: Datasources.md
-  - Maps: 
-    - Maps: Maps/Maps.md
-    - GridVisualisation: Maps/GridVisualisation.md
+      - Datasets: Datasets.md
+      - Datasources: Datasources.md
+  - Maps:
+      - Maps: Maps/Maps.md
+      - GridVisualisation: Maps/GridVisualisation.md
   - Processes:
-    - Processes: Processes/Processes.md
-    - ComputeBuildingChange: Processes/ComputeBuildingChange.md
-    - ComputeChangeInBuiltup_area: Processes/ComputeChangeInBuiltup_area.md
-    - DeliminateStudyArea: Processes/DeliminateStudyArea.md
-    - PrepareBuildingData: Processes/PrepareBuildingData.md
-    - PrepareBuildingDataBDTopo: Processes/PrepareBuildingDataBDTopo.md
-    - PrepareBuildingDataOSM: Processes/PrepareBuildingDataOSM.md
-  - Studies:
-    - StrasbourgStudy: StrasbourgStudy.md
+      - Processes: Processes/Processes.md
+      - ComputeBuildingChange: Processes/ComputeBuildingChange.md
+      - ComputeChangeInBuiltup_area: Processes/ComputeChangeInBuiltup_area.md
+      - DeliminateStudyArea: Processes/DeliminateStudyArea.md
+      - PrepareBuildingData: Processes/PrepareBuildingData.md
+      - PrepareBuildingDataBDTopo: Processes/PrepareBuildingDataBDTopo.md
+      - PrepareBuildingDataOSM: Processes/PrepareBuildingDataOSM.md
+  - Studies: Studies/
