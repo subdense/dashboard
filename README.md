@@ -4,7 +4,7 @@ This github project aims at [modeling building changes](https://doi.org/10.3390/
 
 Such comparative maps of building changes are dedicated to 1) scientific studies to grasp local variations in different phenomena 2) more open debate about these changes with all involved stakeholders, incl. inhabitants and scientists. 
 
-Please feel free to use this project maps and tools, published on the website or to contribute to it.
+Please feel free to use this project maps and tools, published on the [website](http://subdense.github.io/dashboard/) or to contribute to it.
 
 ## How to contribute
 
