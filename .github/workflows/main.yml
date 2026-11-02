@@ -18,11 +18,6 @@ jobs:
           pip install mkdocs-material mkdocs-literate-nav
           pip install mkdocs-macros-plugin
           pip install pymdown-extensions
-      - name: create symbolic links for markdown files in Studies/
-        run: |
-          for file in Studies/*.md; do 
-            ln -sf "$(pwd)/$file" docs/Studies/
-          done
       - name: Deploy site
         run: |
           mkdocs gh-deploy --force
