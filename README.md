@@ -1,6 +1,10 @@
 # Subdense collaborative dashboard
 
-This collaborative dashboard aims at [modeling building changes](https://doi.org/10.3390/ijgi14040155) in different urban functional areas, like for example apparition of built up areas, or roof-stacking of existing buildings, based on available data and at stylising these changes on maps. Detection process mainly relies on comparing different vintages of regional or national surveys to detect changes in the data and analysing the source documentation to evaluate what changes in data are explained by changes in the survey process, and what changes are explained by a change in reality. Such comparative maps of changes can support scientific studies. They may also -we hope- assist in debating about these changes with all involved stakeholders, incl. inhabitants and scientists. Please feel free to use this dashboard maps and tools, published on the website of this git or to contribute to it.
+This github project aims at [modeling building changes](https://doi.org/10.3390/ijgi14040155) in urban functional areas. Building changes can be for example apparition of built up areas, or roof-stacking of existing buildings. Changes are detected either using data natively adapted to diachronic analysis or by comparing vintages of regional or national surveys and analysing the source documentation to evaluate what changes in data are explained by changes in the survey process, and what changes are explained by a change in reality. Detected changes are then stylised, possibly processed, to produce legible maps of building changes on specific timelaps and territories. 
+
+Such comparative maps of building changes are dedicated to 1) scientific studies to grasp local variations in different phenomena 2) more open debate about these changes with all involved stakeholders, incl. inhabitants and scientists. 
+
+Please feel free to use this project maps and tools, published on the [website](http://subdense.github.io/dashboard/) or to contribute to it.
 
 ## How to contribute
 
